@@ -1,8 +1,6 @@
 <template>
   <v-flex xs12 sm12 md12>
     <div class="text-center">
-      <!-- <logo />
-        <vuetify-logo />-->
     </div>
     <v-parallax :src="require('@/assets/banner.jpg')" height="400">
       <v-layout column align-center justify-center class="white--text">
@@ -64,18 +62,50 @@
         <v-spacer />
         <v-btn color="primary" nuxt to="/inspire">Continue</v-btn>
       </v-card-actions>
+      <v-container grid-list-sm fluid>
+        <v-layout row wrap>
+          <v-flex v-for="n in 9" :key="n" xs4 d-flex>
+            <v-card class="d-flex">
+              <v-img
+                :src="require(`@/assets/gallery/pic (${n}).jpg`)"
+                :max-height="225"
+              >
+                <v-layout
+                  slot="placeholder"
+                  fill-height
+                  align-center
+                  justify-center
+                  ma-0
+                >
+                  <v-progress-circular
+                    indeterminate
+                    color="grey lighten-5"
+                  ></v-progress-circular>
+                </v-layout>
+              </v-img>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+      <v-parallax
+        :src="require('@/assets/color-paint-cans-dark.jpg')"
+        height="400"
+      >
+        <v-layout column align-center justify-center>
+          <div class="headline white--text mb-3 text-xs-center">
+            Let us help you with your future painting projects.
+          </div>
+          <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes"
+            >Create an appointment</v-btn
+          >
+        </v-layout>
+      </v-parallax>
     </v-card>
   </v-flex>
 </template>
 
 <script>
-// import Logo from '~/components/Logo.vue'
-// import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
 export default {
-  components: {
-    // Logo,
-    // VuetifyLogo
-  }
+  
 }
 </script>
