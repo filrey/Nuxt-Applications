@@ -1,7 +1,7 @@
 {
-  "name": "first-nuxt-app",
+  "name": "24HrPaintingServices",
   "version": "1.0.0",
-  "description": "My posh Nuxt.js project",
+  "description": "Homepage for 24HrPaintingServices",
   "author": "Filiberto Reyes",
   "private": true,
   "scripts": {
