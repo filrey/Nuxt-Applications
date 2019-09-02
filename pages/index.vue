@@ -1,7 +1,6 @@
 <template>
   <v-flex xs12 sm12 md12>
-    <div class="text-center">
-    </div>
+    <div class="text-center"></div>
     <v-parallax :src="require('@/assets/banner.jpg')" height="400">
       <v-layout column align-center justify-center class="white--text">
         <h1 class="white--text mb-2 display-1 text-xs-center">
@@ -105,7 +104,5 @@
 </template>
 
 <script>
-export default {
-  
-}
+export default {}
 </script>

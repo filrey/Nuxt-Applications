@@ -79,14 +79,14 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'About',
-          to: '/About'
+          title: 'About Us',
+          to: '/about'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: '24HrPaintingServices'
+      title: '24 HR Painting Services'
     }
   }
 }
