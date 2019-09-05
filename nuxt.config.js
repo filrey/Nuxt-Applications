@@ -44,7 +44,8 @@ module.exports = {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-fontawesome'
   ],
   /*
    ** Axios module configuration
@@ -68,7 +69,7 @@ module.exports = {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
-        },
+        }
       }
     }
   },
@@ -79,6 +80,11 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
+    vendor: [
+      '@fortawesome/fontawesome',
+      '@fortawesome/fontawesome-free-solid',
+      '@fortawesome/fontawesome-free-brands'
+    ],
     extend(config, ctx) {}
   }
 }

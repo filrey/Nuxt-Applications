@@ -13,13 +13,18 @@
     "prettier": "npx prettier --write **/*.vue"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.4.0",
     "watch": "^1.0.2"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/vuetify": "^1.0.0",
