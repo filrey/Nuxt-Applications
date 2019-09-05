@@ -1,7 +1,7 @@
 <template>
-  <v-flex xs12 sm12 md12>
+  <v-flex xs12 sm12 md10 offset-1>
     <div class="text-center"></div>
-    <v-parallax :src="require('@/assets/banner.jpg')" height="400">
+    <v-parallax :src="require('@/assets/hero.jpeg')" height="400">
       <v-layout column align-center justify-center class="white--text">
         <h1 class="white--text mb-2 display-1 text-xs-center">
           Painting services based in Panorama City
@@ -13,49 +13,33 @@
       </v-layout>
     </v-parallax>
     <v-card>
-      <v-card-title class="headline"
-        >Welcome to the Vuetify + Nuxt.js template</v-card-title
-      >
+      <v-card-title class="headline">24 Hr Service</v-card-title>
       <v-card-text>
         <p>
-          Vuetify is a progressive Material Design component framework for
-          Vue.js. It was designed to empower developers to create amazing
-          applications.
+          With a wide range of services that suit your every need and
+          requirement, We at 24Hr Service have the know-how and the expertise to
+          get the job done! Let us know how we can help,and we will guarantee
+          your experience with our professionals is enjoyable and satisfactory.
+          We love to hear from our costumers, so feel free to contact us with
+          your feedback!
         </p>
+      </v-card-text>
+      <v-card-title class="headline">Based In Socal</v-card-title>
+      <v-card-text>
         <p>
-          For more information on Vuetify, check out the
-          <a href="https://vuetifyjs.com" target="_blank">documentation</a>.
+          Skip your search for house painters near you; contact the professional
+          and industry experts . We serve the communities in Los Angeles,
+          Thousand Oaks, Ventura, and neighboring cities in California. Contact
+          us today to have the experts handle your exterior painting in summer.
         </p>
+      </v-card-text>
+      <v-card-title class="headline">Improve your home value</v-card-title>
+      <v-card-text>
         <p>
-          If you have questions, please join the official
-          <a href="https://chat.vuetifyjs.com/" target="_blank" title="chat"
-            >discord</a
-          >.
+          Are you putting your home on the market this year? Tick curb appeal
+          off your list as soon as you get a new paint job! Your home will look
+          great and it’ll be in top condition!
         </p>
-        <p>
-          Find a bug? Report it on the github
-          <a
-            href="https://github.com/vuetifyjs/vuetify/issues"
-            target="_blank"
-            title="contribute"
-            >issue board</a
-          >.
-        </p>
-        <p>
-          Thank you for developing with Vuetify and I look forward to bringing
-          more exciting features in the future.
-        </p>
-        <div class="text-xs-right">
-          <em>
-            <small>&mdash; John Leider</small>
-          </em>
-        </div>
-        <hr class="my-3" />
-        <a href="https://nuxtjs.org/" target="_blank">Nuxt Documentation</a>
-        <br />
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank"
-          >Nuxt GitHub</a
-        >
       </v-card-text>
       <v-card-actions>
         <v-spacer />
@@ -92,7 +76,8 @@
       >
         <v-layout column align-center justify-center>
           <div class="headline white--text mb-3 text-xs-center">
-            Let us help you with your future painting projects.
+            We always stand behind our work, with customer satisfaction being
+            our #1 priority.
           </div>
           <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes"
             >Create an appointment</v-btn

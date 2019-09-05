@@ -24,27 +24,59 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-avatar tile>
-        <img :src="require('@/static/favicon-32x32.png')" alt="24Hr Logo"
-      /></v-avatar>
-      <b>
-        <v-toolbar-title v-text="title" color="blue" />
-      </b>
-      <div class="flex-grow-1"></div>
-      <v-toolbar-title>
+
+    <v-app-bar
+      :clipped-left="clipped"
+      fixed
+      app
+      dark
+      dense
+      :src="banner"
+      fade-img-on-scroll
+    >
+      <template v-slot:img="{ props }">
+        <v-img
+          v-bind="props"
+          gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+        ></v-img>
+      </template>
+      <v-app-bar-nav-icon
+        class="mr-1"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
+      <v-btn outlined to="/">
+        <!-- <v-avatar tile>
+          <img :src="require('@/static/favicon-32x32.png')" alt="24Hr Logo"
+        /></v-avatar> -->
         <b>
-          Give us a call today! ( 818 )- 647- 5638
-        </b></v-toolbar-title
-      >
-      <v-toolbar-items>
-        <v-btn text>Link 1</v-btn>
-        <v-btn text>Link 2</v-btn>
-        <v-btn text>Link 3</v-btn>
-      </v-toolbar-items>
-      <v-spacer />
+          <v-toolbar-title color="blue" v-text="title" />
+        </b>
+      </v-btn>
+      <div class="flex-grow-1"></div>
+
+      <v-flex></v-flex>
+      <b>
+        Give us a call today! ( 818 )- 647- 5638
+      </b>
+
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <template v-slot:extension>
+        <v-tabs align-with-title background-color="transparent">
+          <v-tab v-for="(item, i) in items" :key="i" :to="item.to">
+            <v-icon class="mr-1">{{ item.icon }}</v-icon>
+            {{ item.title }}</v-tab
+          >
+        </v-tabs>
+      </template>
     </v-app-bar>
+
     <v-content>
       <v-container>
         <nuxt />
@@ -78,9 +110,9 @@
                 :href="icon.url"
                 target="blank"
                 class="elevation-5 mr-1"
-                v-on="on"
                 outlined
                 dark
+                v-on="on"
               >
                 <i :class="icon.name"></i>
               </v-btn>
@@ -90,7 +122,8 @@
         </v-card-title>
 
         <v-card-actions class="grey darken-3 justify-center">
-          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+          {{ new Date().getFullYear() }} — <strong>Powered by Vuejs</strong>
+          <i class="fab fa-vuejs"></i>
         </v-card-actions>
       </v-card>
     </v-footer>
@@ -104,6 +137,7 @@ export default {
       clipped: true,
       drawer: false,
       fixed: false,
+      banner: require('@/assets/banner.jpg'),
       items: [
         {
           icon: 'mdi-home',
@@ -112,8 +146,13 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'About Us',
+          title: 'About',
           to: '/about'
+        },
+        {
+          icon: 'mdi-message',
+          title: 'Contact us',
+          to: '/contactUs'
         }
       ],
       miniVariant: false,
