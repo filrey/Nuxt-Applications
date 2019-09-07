@@ -1,18 +1,32 @@
 <template>
-  <v-flex xs12 sm12 md10 offset-1>
-    <div class="text-center"></div>
-    <v-parallax :src="require('@/assets/hero.jpeg')" height="400">
-      <v-layout column align-center justify-center class="white--text">
-        <h1 class="white--text mb-2 display-1 text-xs-center">
-          Painting services based in Panorama City
-        </h1>
-        <div class="subheading mb-3 text-xs-center">Open 24 Hours</div>
-        <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes"
-          >Get Started</v-btn
-        >
-      </v-layout>
-    </v-parallax>
-    <v-card>
+  <v-flex>
+    <v-carousel
+      cycle
+      progress
+      height="350"
+      hide-delimiter-background
+      show-arrows-on-hover
+    >
+      <v-carousel-item v-for="(slide, i) in slides" :key="i">
+        <v-sheet :color="colors[i]" height="100%">
+          <v-row class="fill-height" align="center" justify="center">
+            <div class="display-3 ma-2">{{ slide }}</div>
+            <v-card>
+              <v-img
+                max-width="400"
+                max-height="250"
+                :src="slideImg[i]"
+              ></v-img>
+            </v-card>
+          </v-row>
+        </v-sheet>
+      </v-carousel-item>
+    </v-carousel>
+
+    <v-card class="mx-auto" max-width="750" flat>
+      <v-row justify="center">
+        <v-btn class="ma-5" color="primary" nuxt to="">Request a quote</v-btn>
+      </v-row>
       <v-card-title class="headline">24 Hr Service</v-card-title>
       <v-card-text>
         <p>
@@ -43,7 +57,6 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer />
-        <v-btn color="primary" nuxt to="/inspire">Continue</v-btn>
       </v-card-actions>
       <v-container grid-list-sm fluid>
         <v-layout row wrap>
@@ -70,24 +83,50 @@
           </v-flex>
         </v-layout>
       </v-container>
-      <v-parallax
-        :src="require('@/assets/color-paint-cans-dark.jpg')"
-        height="400"
-      >
-        <v-layout column align-center justify-center>
-          <div class="headline white--text mb-3 text-xs-center">
-            We always stand behind our work, with customer satisfaction being
-            our #1 priority.
-          </div>
-          <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes"
-            >Create an appointment</v-btn
-          >
-        </v-layout>
-      </v-parallax>
     </v-card>
+    <v-parallax
+      :src="require('@/assets/color-paint-cans-dark.jpg')"
+      height="400"
+    >
+      <v-layout column align-center justify-center>
+        <div class="headline white--text mb-3 text-xs-center">
+          We always stand behind our work, with customer satisfaction being our
+          #1 priority.
+        </div>
+        <v-btn class="blue lighten-2 mt-5" dark large href=""
+          >Create an appointment</v-btn
+        >
+      </v-layout>
+    </v-parallax>
   </v-flex>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      colors: [
+        'indigo',
+        'warning',
+        'pink darken-2',
+        'red lighten-1',
+        'deep-purple accent-4'
+      ],
+      slides: [
+        'Welcome to 24 HR Painting Services!',
+        'Professional painters with over 10 years of experience',
+        'Exterior and Interior painting',
+        'Hardwood floor refinishing',
+        'Customer satisfaction is our top priority'
+      ],
+      slideImg: [
+        require('@/assets/24trailer.jpg'),
+        require('@/assets/gallery/pic (5).jpg'),
+        require('@/assets/gallery/pic (4).jpg'),
+        require('@/assets/gallery/pic (11).jpg'),
+        require('@/assets/gallery/pic (12).jpg')
+      ]
+    }
+  }
+}
 </script>

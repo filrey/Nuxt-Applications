@@ -25,15 +25,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-      dark
-      dense
-      :src="banner"
-      fade-img-on-scroll
-    >
+    <v-app-bar :clipped-left="clipped" fixed app dark dense :src="banner">
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
@@ -41,20 +33,15 @@
         ></v-img>
       </template>
       <v-app-bar-nav-icon
-        class="mr-1"
+        class="ml-lg-12 mr-1"
         @click.stop="drawer = !drawer"
       ></v-app-bar-nav-icon>
       <v-btn outlined to="/">
-        <!-- <v-avatar tile>
-          <img :src="require('@/static/favicon-32x32.png')" alt="24Hr Logo"
-        /></v-avatar> -->
         <b>
           <v-toolbar-title color="blue" v-text="title" />
         </b>
       </v-btn>
       <div class="flex-grow-1"></div>
-
-      <v-flex></v-flex>
       <b>
         Give us a call today! ( 818 )- 647- 5638
       </b>
@@ -63,12 +50,16 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn class="mr-lg-12" icon>
         <v-icon>mdi-heart</v-icon>
       </v-btn>
 
       <template v-slot:extension>
-        <v-tabs align-with-title background-color="transparent">
+        <v-tabs
+          class="ml-lg-12"
+          align-with-title
+          background-color="transparent"
+        >
           <v-tab v-for="(item, i) in items" :key="i" :to="item.to">
             <v-icon class="mr-1">{{ item.icon }}</v-icon>
             {{ item.title }}</v-tab

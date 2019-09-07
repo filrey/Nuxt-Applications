@@ -1,5 +1,5 @@
 <template>
-  <div>Contact Us</div>
+  <div>Still under construction</div>
 </template>
 <script>
 export default {}
