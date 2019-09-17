@@ -84,7 +84,7 @@
         </v-layout>
       </v-container>
     </v-card>
-    <v-parallax :src="require('@/assets/section.jpg')" height="400">
+    <v-parallax :src="require('@/assets/wall-unfinshed.jpg')" height="400">
       <v-overlay absolute>
         <v-layout column align-center justify-center>
           <div class="headline white--text mb-3 text-xs-center">
