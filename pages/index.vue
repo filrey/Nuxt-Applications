@@ -8,7 +8,7 @@
       show-arrows-on-hover
     >
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
-        <v-sheet :color="colors[i]" height="100%">
+        <v-sheet color="primary" height="100%">
           <v-row class="fill-height" align="center" justify="center">
             <div class="display-3 ma-2">{{ slide }}</div>
             <v-card>
@@ -25,7 +25,7 @@
 
     <v-card class="mx-auto" max-width="750" flat>
       <v-row justify="center">
-        <v-btn class="ma-5" color="primary" nuxt to="">Request a quote</v-btn>
+        <!-- <v-btn class="ma-5" color="primary" nuxt to="">Request a quote</v-btn> -->
       </v-row>
       <v-card-title class="headline">24 Hr Service</v-card-title>
       <v-card-text>
@@ -84,19 +84,18 @@
         </v-layout>
       </v-container>
     </v-card>
-    <v-parallax
-      :src="require('@/assets/color-paint-cans-dark.jpg')"
-      height="400"
-    >
-      <v-layout column align-center justify-center>
-        <div class="headline white--text mb-3 text-xs-center">
-          We always stand behind our work, with customer satisfaction being our
-          #1 priority.
-        </div>
-        <v-btn class="blue lighten-2 mt-5" dark large href=""
+    <v-parallax :src="require('@/assets/section.jpg')" height="400">
+      <v-overlay absolute>
+        <v-layout column align-center justify-center>
+          <div class="headline white--text mb-3 text-xs-center">
+            We always stand behind our work, with customer satisfaction being
+            our #1 priority.
+          </div>
+          <!-- <v-btn class="blue lighten-2 mt-5" dark large href=""
           >Create an appointment</v-btn
-        >
-      </v-layout>
+        > -->
+        </v-layout>
+      </v-overlay>
     </v-parallax>
   </v-flex>
 </template>

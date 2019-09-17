@@ -25,40 +25,32 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :clipped-left="clipped" fixed app dark dense :src="banner">
+    <v-app-bar :clipped-left="clipped" fixed app light dense>
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
           gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
         ></v-img>
       </template>
-      <v-app-bar-nav-icon
+      <!-- <v-app-bar-nav-icon
         class="ml-lg-12 mr-1"
         @click.stop="drawer = !drawer"
-      ></v-app-bar-nav-icon>
-      <v-btn outlined to="/">
+      ></v-app-bar-nav-icon> -->
+      <v-btn class="ml-lg-12 mr-1" text depressed to="/">
         <b>
           <v-toolbar-title color="blue" v-text="title" />
         </b>
       </v-btn>
       <div class="flex-grow-1"></div>
-      <b>
+      <b class="mr-lg-12">
         Give us a call today! ( 818 )- 647- 5638
       </b>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn class="mr-lg-12" icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
       <template v-slot:extension>
         <v-tabs
-          class="ml-lg-12"
+          class="ml-lg-12 mr-1"
           align-with-title
-          background-color="transparent"
+          background-color="grey lighten-5"
         >
           <v-tab v-for="(item, i) in items" :key="i" :to="item.to">
             <v-icon class="mr-1">{{ item.icon }}</v-icon>
