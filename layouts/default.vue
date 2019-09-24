@@ -42,9 +42,17 @@
         </b>
       </v-btn>
       <div class="flex-grow-1"></div>
-      <b class="mr-lg-12">
+      <b v-if="user == null" class="mr-lg-12">
         Give us a call today! ( 818 )- 647- 5638
       </b>
+      <v-avatar v-if="user" class="mr-1" size="36"
+        ><img :src="photo" alt="avatar"
+      /></v-avatar>
+      <b v-if="user"> {{ name }} </b>
+
+      <v-btn class="ml-3" outlined v-if="user != null" @click="logout">
+        Log Out
+      </v-btn>
 
       <template v-slot:extension>
         <v-tabs
@@ -56,6 +64,14 @@
             <v-icon class="mr-1">{{ item.icon }}</v-icon>
             {{ item.title }}</v-tab
           >
+          <!-- <v-tab v-if="user == null" to="/login">
+            <v-icon class="mr-1">mdi-arrow-right-box</v-icon>
+            Login
+          </v-tab>
+          <v-tab v-if="user == null" to="/register">
+            <v-icon class="mr-1">mdi-file-document-box</v-icon>
+            Register
+          </v-tab> -->
         </v-tabs>
       </template>
     </v-app-bar>
@@ -114,12 +130,20 @@
 </template>
 
 <script>
+import firebase from 'firebase'
+// import { mapState } from 'vuex'
 export default {
+  name: 'Nav',
   data() {
     return {
       clipped: true,
       drawer: false,
       fixed: false,
+      photo: '',
+      userId: '',
+      name: '',
+      email: '',
+      user: null,
       banner: require('@/assets/banner.jpg'),
       items: [
         {
@@ -176,6 +200,29 @@ export default {
           tooltip: 'Houzz'
         }
       ]
+    }
+  },
+  created() {
+    const vm = this
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        vm.user = user
+        vm.name = vm.user.displayName
+        vm.email = vm.user.email
+        vm.photo = vm.user.photoURL
+        vm.userId = vm.user.uid
+      }
+    })
+  },
+  computed: {},
+  methods: {
+    logout() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.go()
+        })
     }
   }
 }
