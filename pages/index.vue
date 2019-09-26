@@ -25,7 +25,10 @@
 
     <v-card class="mx-auto" flat>
       <v-row justify="center">
-        <v-col :lg="4" :sm="12">Col 1 </v-col>
+        <v-col :lg="4" :sm="12"
+          >Col 1
+          <div id="firstCol"></div>
+        </v-col>
         <v-col :lg="4" :sm="12">
           <div id="middleCol">
             <!-- Text Content -->
@@ -122,6 +125,7 @@
         </v-col>
       </v-row>
     </v-card>
+
     <v-parallax :src="require('@/assets/wall-unfinshed.jpg')" height="400">
       <v-overlay absolute>
         <v-layout column align-center justify-center>
@@ -206,6 +210,7 @@ export default {
         }
       ]
     }
-  }
+  },
+  created() {}
 }
 </script>
