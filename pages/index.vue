@@ -25,9 +25,34 @@
 
     <v-card class="mx-auto" flat>
       <v-row justify="center">
-        <v-col :lg="4" :sm="12"
-          >Col 1
-          <div id="firstCol"></div>
+        <v-col :lg="4" :sm="12">
+          <div id="firstCol">
+            <v-card
+              v-for="post in posts"
+              :key="post.id"
+              max-height="250"
+              class="ma-1"
+              color="#1F7087"
+              dark
+            >
+              <!-- <v-img :src="post.imageUrl"></v-img> -->
+              <v-list-item three-line>
+                <v-list-item-avatar size="125" tile>
+                  <v-img :src="post.imageUrl"></v-img>
+                </v-list-item-avatar>
+
+                <v-list-item-content class="align-self-start">
+                  <v-list-item-title class="headline mb-2">{{
+                    post.title
+                  }}</v-list-item-title>
+
+                  <v-list-item-subtitle>{{
+                    post.description
+                  }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-card>
+          </div>
         </v-col>
         <v-col :lg="4" :sm="12">
           <div id="middleCol">
@@ -144,6 +169,7 @@
 
 <script>
 export default {
+  name: 'index',
   data() {
     return {
       colors: [
@@ -211,6 +237,13 @@ export default {
       ]
     }
   },
-  created() {}
+  computed: {
+    posts() {
+      return this.$store.getters.featuredPosts
+    }
+  },
+  created() {
+    this.$store.dispatch('loadPosts')
+  }
 }
 </script>
