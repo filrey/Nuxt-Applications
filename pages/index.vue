@@ -12,11 +12,11 @@
           <v-row class="fill-height" align="center" justify="center">
             <div class="display-3 ma-2">{{ slide }}</div>
             <v-card>
-              <v-img
+              <!-- <v-img
                 max-width="400"
                 max-height="250"
                 :src="slideImg[i]"
-              ></v-img>
+              ></v-img> -->
             </v-card>
           </v-row>
         </v-sheet>
@@ -31,9 +31,8 @@
               v-for="post in posts"
               :key="post.id"
               max-height="250"
-              class="ma-1"
-              color="#1F7087"
-              dark
+              class="ma-2"
+              color="grey lighten-3"
             >
               <!-- <v-img :src="post.imageUrl"></v-img> -->
               <v-list-item three-line>
@@ -129,8 +128,10 @@
             <!-- Reviews -->
             <div v-for="review in reviews" :key="review.id">
               <v-avatar class="mt-1" size="48">
-                <img :src="review.photo" alt=""
-              /></v-avatar>
+                <!-- <img :src="review.photo" alt=""
+              /> -->
+                <v-icon large>mdi-account</v-icon>
+              </v-avatar>
               <h4>{{ review.name }}</h4>
               <h5>{{ review.date }}</h5>
               <v-card-text>
@@ -195,55 +196,64 @@ export default {
       ],
       reviews: [
         {
-          name: 'Filiberto Reyes',
+          name: 'Abbey H',
           rating: 5,
           date: '9/24/2019',
           photo:
             'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
-          text: 'They were pretty good 5 stars'
+          text:
+            'Fredy and his team were great! Fredy was super responsive and always available if I had any questions. The paint job his team did on the interior of my house was fantastic! So happy I got so lucky with them. Just moved into a new home and it is so nice to have beautifully painted walls. I would recommend them to anyone!'
         },
         {
-          name: 'Filiberto Reyes',
+          name: 'Julie S.',
           rating: 5,
           date: '9/24/2019',
           photo:
             'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
-          text: 'They were pretty good 5 stars'
+          text:
+            'I was amazed at the quality of work, how timely the crew was, the value and the professionalism. I highly recommend 24hr. painting to anyone who is in need of painting the interior of their home. I have heavy furniture and cats, and moving our items and working around the cats was not an issue. I wish Fredy and his crew much success!'
         },
         {
-          name: 'Filiberto Reyes',
+          name: 'Patrick R.',
           rating: 5,
           date: '9/24/2019',
           photo:
             'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
-          text: 'They were pretty good 5 stars'
+          text:
+            'We recently had recessed lighting installed, and there were several patches that needed to be covered, texturized and painted. Fredy did an amazing job patching, adding texture to and painting our walls and ceilings throughout our place. When he was finished, it looked like new! He was very hard-working and detail oriented, and he went out of his way to clean up after himself. I would highly recommend him to anyone looking for any kind of painting work. Thank you Fredy for all your great work!'
         },
         {
-          name: 'Filiberto Reyes',
+          name: 'Adam C.',
           rating: 5,
           date: '9/24/2019',
           photo:
             'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
-          text: 'They were pretty good 5 stars'
-        },
-        {
-          name: 'Filiberto Reyes',
-          rating: 5,
-          date: '9/24/2019',
-          photo:
-            'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
-          text: 'They were pretty good 5 stars'
+          text:
+            '24HR Painting did an amazing job painting our new home. We had a pretty narrow window between when we got our keys and when we moved our furniture. Fredy was very prompt, gave us a VERY competitive quote (lower than other companies we checked with) and his guys did an amazing job. When my wife saw the results, she said Its like its a different place! Could not recommend more highly'
         }
+        // {
+        //   name: 'Kim M.',
+        //   rating: 5,
+        //   date: '9/24/2019',
+        //   photo:
+        //     'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
+        //   text:
+        //     'Fredy and his group are the best. They were punctual and very flexible. The finished preparing walls and patching stairs and wall. There service is unmatched. Their pricing is very competitive. I really can’t say enough about their work. I would definitely hire them again and will most definitely refer them to anyone who needs painting services. Fredy thank you again for your superior work and your awesome responsive and honest crew. You guys ROCK!!!!!'
+        // }
       ]
     }
   },
   computed: {
     posts() {
       return this.$store.getters.featuredPosts
+    },
+    loadedReviews() {
+      return this.$store.getters.loadedReviews
     }
   },
   created() {
     this.$store.dispatch('loadPosts')
+    this.$store.dispatch('loadReviews')
   }
 }
 </script>

@@ -1,4 +1,6 @@
 import firebase from 'firebase'
+import { fireDb } from '~/plugins/firebase.js'
+
 /* eslint-disable */
 export const strict = false
 
@@ -7,7 +9,8 @@ export const state = () => ({
   user: null,
   loading: false,
   error: null,
-  loadedPosts: []
+  loadedPosts: [],
+  loadedReviews: []
 })
 
 export const getters = {
@@ -19,9 +22,15 @@ export const getters = {
       return postA.date > postB.date
     })
   },
-  featuredPosts(state, getters) {
-    return getters.loadedPosts.slice(0, 5)
+  loadedReviews(state) {
+    return state.loadedReviews
   },
+  featuredPosts(state, getters) {
+    return getters.loadedPosts.slice(0, 6)
+  },
+  // featuredReviews(state, getters) {
+  //   return getters.loadedReviews.slice(0, 5)
+  // },
   loadedPost(state) {
     return (postId) => {
       return state.loadedPosts.find((post) => {
@@ -58,6 +67,9 @@ export const mutations = {
   },
   setLoadedPosts(state, payload) {
     state.loadedPosts = payload
+  },
+  setLoadedReviews(state, payload) {
+    state.loadedReviews = payload
   },
   createPost(state, payload) {
     state.loadedPosts.push(payload)
@@ -101,6 +113,25 @@ export const actions = {
       })
       .catch((error) => {
         console.log(error)
+        commit('setLoading', false)
+      })
+  },
+  loadReviews({ commit }) {
+    commit('setLoading', true)
+
+    let Ref = fireDb.collection('Reviews')
+    let Reviews = []
+    let all = Ref.get()
+      .then((snapshot) => {
+        snapshot.forEach((doc) => {
+          console.log(doc.id, '=>', doc.data())
+          Reviews.push(doc.data())
+        })
+        commit('setLoadedReviews', Reviews)
+        commit('setLoading', false)
+      })
+      .catch((err) => {
+        console.log('Error getting documents', err)
         commit('setLoading', false)
       })
   },
