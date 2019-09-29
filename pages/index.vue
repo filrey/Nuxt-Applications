@@ -198,7 +198,7 @@ export default {
         {
           name: 'Abbey H',
           rating: 5,
-          date: '9/24/2019',
+          date: 'Jul 25, 2019',
           photo:
             'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
           text:
@@ -207,7 +207,7 @@ export default {
         {
           name: 'Julie S.',
           rating: 5,
-          date: '9/24/2019',
+          date: 'Jul 18, 2019',
           photo:
             'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
           text:
@@ -216,7 +216,7 @@ export default {
         {
           name: 'Patrick R.',
           rating: 5,
-          date: '9/24/2019',
+          date: 'Aug 23, 2019',
           photo:
             'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
           text:
@@ -225,7 +225,7 @@ export default {
         {
           name: 'Adam C.',
           rating: 5,
-          date: '9/24/2019',
+          date: 'Jul 1, 2019',
           photo:
             'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
           text:
@@ -234,7 +234,7 @@ export default {
         // {
         //   name: 'Kim M.',
         //   rating: 5,
-        //   date: '9/24/2019',
+        //   date: 'Sep 19, 2018',
         //   photo:
         //     'https://lh3.googleusercontent.com/a-/AAuE7mBrN33L5hafLXGacVOzNHrWc3RTV6bMng3sFmB36Q',
         //   text:
