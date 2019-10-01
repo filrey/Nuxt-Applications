@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  /* eslint-disable */
   layout: 'empty',
   props: {
     error: {

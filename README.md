@@ -1,4 +1,4 @@
-# first-nuxt-app
+# Filiberto Reyes - Web Developer
 
 > My posh Nuxt.js project
 
