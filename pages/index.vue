@@ -251,7 +251,7 @@ export default {
       return this.$store.getters.loadedReviews
     }
   },
-  created() {
+  beforeMount() {
     this.$store.dispatch('loadPosts')
     this.$store.dispatch('loadReviews')
   }
