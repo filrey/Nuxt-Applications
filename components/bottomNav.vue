@@ -2,21 +2,18 @@
   <div>
     <v-snackbar v-model="snackbar" :timeout="timeout">
       <v-tabs>
-        <v-tab v-for="link in links" :key="link.id">
+        <v-tab v-for="link in links" :key="link.id" :to="link.to">
           <v-icon>{{ link.icon }}</v-icon
           >{{ link.title }}</v-tab
         >
       </v-tabs>
-      <!-- <v-btn color="pink" text @click="snackbar = false">
-        Close
-      </v-btn> -->
     </v-snackbar>
   </div>
 </template>
 <script>
 /* eslint-disable */
 export default {
-  name: 'socialMedia',
+  name: 'bottomNav',
   data() {
     return {
       snackbar: true,
@@ -33,8 +30,13 @@ export default {
           to: '/projects'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Contact Me',
+          icon: 'mdi-email',
+          title: 'Contact',
+          to: '/contact'
+        },
+        {
+          icon: 'mdi-file-document-box-outline',
+          title: 'Resume',
           to: '/contact'
         }
       ]

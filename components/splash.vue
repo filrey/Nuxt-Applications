@@ -3,7 +3,7 @@
     <v-container fluid fill-height>
       <v-layout align-center justify-left v-bind="binding">
         <v-row>
-          <v-col :lg="6" :sm="12">
+          <v-col :lg="6" :sm="12" :xsm="12">
             <v-flex>
               <v-card class="cardSlide">
                 <v-sheet class="elevation-12">
@@ -12,30 +12,8 @@
               </v-card>
             </v-flex>
           </v-col>
-          <v-col :lg="6" :sm="12">
-            <v-flex>
-              <v-card class="cardSlide_right">
-                <v-sheet class="elevation-12">
-                  <v-list two-line>
-                    <!-- <v-list-item v-for="link in links" v-bind:key="link.id"> <v-avatar src="https://vuetifyjs.com/apple-touch-icon-180x180.png"></v-avatar> <v-btn>{{link.name}}</v-btn></v-list-item> -->
-
-                    <v-list-item
-                      v-for="link in links"
-                      v-bind:key="link.id"
-                      link
-                    >
-                      <v-list-item-icon>
-                        <v-icon>{{ link.icon }}</v-icon>
-                      </v-list-item-icon>
-
-                      <v-list-item-content>
-                        <v-list-item-title> {{ link.name }}</v-list-item-title>
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-list>
-                </v-sheet>
-              </v-card>
-            </v-flex>
+          <v-col :lg="6" :sm="12" :xsm="12">
+            <intro></intro>
           </v-col>
         </v-row>
       </v-layout>
@@ -47,9 +25,12 @@
 <script>
 // @ is an alias to /src
 /* eslint-disable */
+import intro from '~/components/intro.vue'
 export default {
   name: 'home',
-  components: {},
+  components: {
+    intro
+  },
   data() {
     return {
       links: [

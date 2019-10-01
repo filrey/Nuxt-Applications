@@ -53,16 +53,16 @@
     <!-- <v-footer :fixed="fixed" app>
       <span>&copy; 2019</span>
     </v-footer> -->
-    <social></social>
+    <bottom-Nav></bottom-Nav>
   </v-app>
 </template>
 
 <script>
 /* eslint-disable */
-import social from '~/components/socialMedia.vue'
+import bottomNav from '~/components/bottomNav.vue'
 export default {
   components: {
-    social
+    bottomNav
   },
   data() {
     return {
