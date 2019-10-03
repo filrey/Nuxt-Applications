@@ -11,9 +11,13 @@
             I am a software developer specializing in web development.
           </p>
           <p>
-            Check out some of the work I have done or if you need to get in
-            contact with me
-            <a target="_blank" title="chat"> links </a>.
+            Check out some of the work I have done under the portfolio section.
+            My resume
+            <a
+              href="./assets/pdf/Filiberto Reyes Resume V5.pdf"
+              download="FilibertoReyesResume.pdf"
+              >Download</a
+            >
           </p>
 
           <p>
