@@ -19,7 +19,6 @@
               >View</a
             >
           </p>
-
           <p>
             Remotely available from Los Angeles. If you want to get in touch
             about a project collaboration feel free to shoot me an email at
@@ -50,6 +49,11 @@
             href="https://github.com/filrey"
             target="blank"
           >
+            <font-awesome-icon
+              class="mr-1"
+              :icon="['fab', 'github-alt']"
+              size="lg"
+            />
             Github
           </v-btn>
         </v-card-actions>
