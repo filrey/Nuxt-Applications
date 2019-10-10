@@ -11,12 +11,12 @@
             I am a software developer specializing in web development.
           </p>
           <p>
-            Check out some of the work I have done under the portfolio section.
+            Check out some of the work I have done under the projects section.
             My resume
             <a
-              href="./assets/pdf/Filiberto Reyes Resume V5.pdf"
-              download="FilibertoReyesResume.pdf"
-              >Download</a
+              href="https://drive.google.com/open?id=1uNQouPHsOXyAUWccbwkQ1uqNzBRwlB3t"
+              target="blank"
+              >View</a
             >
           </p>
 
@@ -25,6 +25,10 @@
             about a project collaboration feel free to shoot me an email at
             filibertoreyes55@gmail.com
           </p>
+
+          <p>
+            Thanks for visiting!
+          </p>
           <div class="text-xs-right">
             <em><small>&mdash; Filiberto</small></em>
           </div>
@@ -32,8 +36,21 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire">
-            Continue
+          <v-btn
+            color="primary"
+            nuxt
+            href="www.linkedin.com/in/filiberto-reyes"
+            target="blank"
+          >
+            LinkedIn
+          </v-btn>
+          <v-btn
+            color="primary"
+            nuxt
+            href="https://github.com/filrey"
+            target="blank"
+          >
+            Github
           </v-btn>
         </v-card-actions>
       </v-card>
