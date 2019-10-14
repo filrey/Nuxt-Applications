@@ -41,6 +41,11 @@
             href="www.linkedin.com/in/filiberto-reyes"
             target="blank"
           >
+            <font-awesome-icon
+              class="mr-1"
+              :icon="['fab', 'linkedin']"
+              size="lg"
+            />
             LinkedIn
           </v-btn>
           <v-btn

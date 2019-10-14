@@ -25,21 +25,53 @@
             <v-card-actions>
               <div class="flex-grow-1"></div>
 
-              <v-btn icon>
-                <v-icon>mdi-heart</v-icon>
-              </v-btn>
+              <v-tooltip v-if="card.code" top>
+                <template v-slot:activator="{ on }">
+                  <v-btn dark icon :href="card.code" target="blank" v-on="on"
+                    ><font-awesome-icon :icon="['fas', 'laptop-code']" size="lg"
+                  /></v-btn>
+                </template>
+                <span>Source Code</span>
+              </v-tooltip>
 
-              <v-btn icon>
-                <v-icon>mdi-bookmark</v-icon>
-              </v-btn>
+              <v-tooltip v-else top>
+                <template v-slot:activator="{ on }">
+                  <v-btn dark icon @click="overlay = !overlay" v-on="on"
+                    ><font-awesome-icon :icon="['fas', 'laptop-code']" size="lg"
+                  /></v-btn>
+                </template>
+                <span>Source Code</span>
+              </v-tooltip>
 
-              <v-btn icon>
-                <v-icon>mdi-share-variant</v-icon>
-              </v-btn>
+              <v-tooltip v-if="card.live" top>
+                <template v-slot:activator="{ on }">
+                  <v-btn dark icon :href="card.live" target="blank" v-on="on"
+                    ><font-awesome-icon :icon="['fa', 'globe']" size="lg"
+                  /></v-btn>
+                </template>
+                <span>Live</span>
+              </v-tooltip>
+
+              <v-tooltip v-else top>
+                <template v-slot:activator="{ on }">
+                  <v-btn dark icon @click="overlay = !overlay" v-on="on"
+                    ><font-awesome-icon :icon="['fa', 'globe']" size="lg"
+                  /></v-btn>
+                </template>
+                <span>Live</span>
+              </v-tooltip>
             </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
+
+      <div @click="overlay = !overlay">
+        <v-overlay :value="overlay">
+          <v-btn color="primary" class="mt-12">
+            Coming Soon!
+          </v-btn>
+        </v-overlay>
+      </div>
     </v-container>
   </div>
 </template>
@@ -52,8 +84,10 @@ export default {
     return {
       cards: [
         {
-          title: '24HrPaintingServices',
+          title: '24HrPaintingServices Business Site',
           src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
+          code: 'https://github.com/filrey/Nuxt-Applications/tree/24hrpainting',
+          live: 'https://24hrpaintingservices.com/',
           lg: 6,
           sm: 12
         },
@@ -87,7 +121,8 @@ export default {
           lg: 6,
           sm: 12
         }
-      ]
+      ],
+      overlay: false
     }
   }
 }
