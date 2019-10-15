@@ -37,8 +37,7 @@
           <v-spacer />
           <v-btn
             color="primary"
-            nuxt
-            href="www.linkedin.com/in/filiberto-reyes"
+            href="https://www.linkedin.com/in/filiberto-reyes/"
             target="blank"
           >
             <font-awesome-icon
@@ -50,7 +49,6 @@
           </v-btn>
           <v-btn
             color="primary"
-            nuxt
             href="https://github.com/filrey"
             target="blank"
           >
