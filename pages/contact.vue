@@ -10,17 +10,17 @@
               method="POST"
               data-netlify="true"
             >
-              <v-text-field label="Name" type="text">
-                <input type="text" name="name" />
+              <v-text-field label="Name" type="text" name="name">
+                <!-- <input type="text" name="name" /> -->
               </v-text-field>
-              <v-text-field label="Email" type="email">
-                <input type="email" name="email" />
+              <v-text-field label="Email" type="email" name="email">
+                <!-- <input type="email" name="email" /> -->
               </v-text-field>
 
-              <v-textarea label="Message">
-                <label>Message: <textarea name="message"></textarea></label>
+              <v-textarea label="Message" name="message">
+                <!-- <label>Message: <textarea name="message"></textarea></label> -->
               </v-textarea>
-              <div data-netlify-recaptcha="true"></div>
+              <div class="mb-3" data-netlify-recaptcha="true"></div>
               <v-btn class="mb-3" color="primary" type="submit">Send</v-btn>
             </v-form>
           </v-card>
