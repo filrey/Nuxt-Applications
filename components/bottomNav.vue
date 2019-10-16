@@ -17,7 +17,7 @@
       </v-tabs>
     </v-snackbar>
 
-    <v-bottom-navigation v-else v-model="bottomNav" fixed>
+    <v-bottom-navigation class="pa-1" v-else v-model="bottomNav" fixed>
       <v-btn
         v-for="link in links"
         :key="link.id"
