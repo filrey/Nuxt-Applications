@@ -36,8 +36,6 @@ export default {
   data() {
     return {}
   },
-  created() {
-    vm.$forceUpdate()
-  }
+  created() {}
 }
 </script>
