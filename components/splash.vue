@@ -3,7 +3,7 @@
     <v-container fluid fill-height>
       <v-layout align-center justify-left v-bind="binding">
         <v-row>
-          <v-col :lg="6" :sm="12" :xsm="12">
+          <v-col v-if="!isMobile" :cols="6">
             <v-flex>
               <v-card class="cardSlide">
                 <v-sheet class="elevation-12">
@@ -12,7 +12,18 @@
               </v-card>
             </v-flex>
           </v-col>
-          <v-col :lg="6" :sm="12" :xsm="12">
+          <v-col :cols="12" v-else>
+            <v-img
+              :src="imgAsset[1]"
+              class="grey lighten-2"
+              max-width="300"
+            ></v-img
+          ></v-col>
+          <v-col v-if="!isMobile" :cols="6">
+            <intro></intro>
+          </v-col>
+
+          <v-col class="max-width-323" v-else :cols="12">
             <intro></intro>
           </v-col>
         </v-row>
@@ -60,22 +71,28 @@ export default {
           url: ''
         }
       ],
-      imgAsset: [require('@/assets/png/bg3.png')]
+      imgAsset: [
+        require('@/assets/png/bg3.png'),
+        require('@/assets/png/cardmobile.png')
+      ],
+      isMobile: false
     }
   },
-  created() {
-    // this.calculateScreen()
+  beforeDestroy() {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.onResize, { passive: true })
+    }
   },
+
+  mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize, { passive: true })
+  },
+
   methods: {
-    // calculateScreen() {
-    //   let w = window,
-    //     d = document,
-    //     e = d.documentElement,
-    //     g = d.getElementsByTagName('body')[0],
-    //     x = w.innerWidth || e.clientWidth || g.clientWidth,
-    //     y = w.innerHeight || e.clientHeight || g.clientHeight
-    //   return x + ' × ' + y
-    // }
+    onResize() {
+      this.isMobile = window.innerWidth < 600
+    }
   },
   computed: {
     binding() {
@@ -91,6 +108,9 @@ export default {
 }
 </script>
 <style lang="scss">
+.max-width-323 {
+  max-width: 323px;
+}
 .homeCard {
   background-color: #e1e1e1;
   background: url(../assets/png/bg2.png);
