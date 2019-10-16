@@ -1,31 +1,32 @@
 <template>
   <div>
-    <v-card>
-      <form name="contact" method="POST" data-netlify="true">
-        <p>
-          <label>Your Name: <input type="text" name="name"/></label>
-        </p>
-        <p>
-          <label>Your Email: <input type="email" name="email"/></label>
-        </p>
-        <p>
-          <label
-            >Your Role:
-            <select name="role[]" multiple>
-              <option value="leader">Leader</option>
-              <option value="follower">Follower</option>
-            </select></label
-          >
-        </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-          <div data-netlify-recaptcha="true"></div>
-          <button type="submit">Send</button>
-        </p>
-      </form>
-    </v-card>
+    <v-container>
+      <v-row>
+        <v-col>
+          <v-card>
+            <v-form
+              class="ma-3"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+            >
+              <v-text-field label="Name" type="text">
+                <input type="text" name="name" />
+              </v-text-field>
+              <v-text-field label="Email" type="email">
+                <input type="email" name="email" />
+              </v-text-field>
+
+              <v-textarea label="Message">
+                <label>Message: <textarea name="message"></textarea></label>
+              </v-textarea>
+              <div data-netlify-recaptcha="true"></div>
+              <v-btn class="mb-3" color="primary" type="submit">Send</v-btn>
+            </v-form>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <script>
