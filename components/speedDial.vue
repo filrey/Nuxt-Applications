@@ -22,24 +22,24 @@
             fab
           >
             <v-icon v-if="fab">mdi-close</v-icon>
-            <v-icon v-else>mdi-apps</v-icon>
+            <v-icon v-else>mdi-view-quilt</v-icon>
           </v-btn>
         </template>
 
-        <v-tooltip
+        <v-chip
+          class="mb-3 mr-10"
           v-for="link in links"
           :key="link.id"
-          v-model="show"
-          :open-on-hover="false"
-          left
+          :color="link.color"
+          :to="link.to"
+          :href="link.resumeUrl"
+          :input-value="show"
+          filter
+          :filter-icon="link.icon"
+          target="blank"
         >
-          <template v-slot:activator="{ on }">
-            <v-btn :color="link.color" :to="link.to" fab small dark v-on="on"
-              ><v-icon>{{ link.icon }}</v-icon></v-btn
-            >
-          </template>
-          <span>{{ link.title }}</span>
-        </v-tooltip>
+          {{ link.title }}</v-chip
+        >
       </v-speed-dial>
     </v-col>
   </v-row>
@@ -71,7 +71,7 @@ export default {
         {
           icon: 'mdi-chart-bubble',
           title: 'Projects',
-          color: 'indigo',
+          color: 'primary',
           to: '/projects'
         },
         {
@@ -79,6 +79,13 @@ export default {
           title: 'Contact',
           color: 'red',
           to: '/contact'
+        },
+        {
+          icon: 'mdi-file-document-box-outline',
+          title: 'Resume',
+          color: 'black',
+          resumeUrl:
+            'https://drive.google.com/open?id=1uNQouPHsOXyAUWccbwkQ1uqNzBRwlB3t'
         }
       ]
     }
@@ -100,7 +107,7 @@ export default {
   methods: {
     activate() {
       this.show = false
-      setTimeout(() => (this.show = true), 500)
+      setTimeout(() => (this.show = true), 50)
     }
   },
   watch: {
