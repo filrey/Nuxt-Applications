@@ -12,7 +12,7 @@
               </v-card>
             </v-flex>
           </v-col>
-          <v-col :cols="12" v-else>
+          <v-col v-else :cols="12">
             <v-img
               :src="imgAsset[1]"
               class="grey lighten-2"
@@ -23,13 +23,12 @@
             <intro></intro>
           </v-col>
 
-          <v-col class="max-width-323" v-else :cols="12">
+          <v-col v-else class="max-width-323" :cols="12">
             <intro></intro>
           </v-col>
         </v-row>
       </v-layout>
     </v-container>
-    <!-- Current Screen: {{ this.calculateScreen() }} -->
   </div>
 </template>
 

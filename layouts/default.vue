@@ -37,6 +37,7 @@
       <v-container>
         <nuxt />
       </v-container>
+      <!-- <speed-dial></speed-dial> -->
     </v-content>
     <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list>
@@ -60,9 +61,11 @@
 <script>
 /* eslint-disable */
 import bottomNav from '~/components/bottomNav.vue'
+import speedDial from '~/components/speedDial.vue'
 export default {
   components: {
-    bottomNav
+    bottomNav,
+    speedDial
   },
   data() {
     return {

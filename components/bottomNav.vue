@@ -16,8 +16,8 @@
         >
       </v-tabs>
     </v-snackbar>
-
-    <v-bottom-navigation class="pa-1" v-else v-model="bottomNav" fixed>
+    <speed-dial></speed-dial>
+    <!-- <v-bottom-navigation v-else v-model="bottomNav" class="pa-1" fixed>
       <v-btn
         v-for="link in links"
         :key="link.id"
@@ -28,27 +28,16 @@
         <v-icon>{{ link.icon }}</v-icon>
         <Github-Icon />
       </v-btn>
-    </v-bottom-navigation>
+    </v-bottom-navigation> -->
   </div>
 </template>
 <script>
-import { mdiGithubFace } from '@mdi/js'
+import speedDial from '~/components/speedDial.vue'
 /* eslint-disable */
 export default {
   name: 'bottomNav',
-  render() {
-    return (
-      <Github-Icon
-        path={mdiGithubFace}
-        title="Github"
-        size={1}
-        horizontal
-        vertical
-        rotate={90}
-        color="black"
-        spin
-      />
-    )
+  components: {
+    speedDial
   },
   data() {
     return {
