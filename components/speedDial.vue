@@ -15,11 +15,11 @@
       >
         <template v-slot:activator>
           <v-btn
-            @click="activate()"
             v-model="fab"
             color="blue darken-2"
             dark
             fab
+            @click="activate()"
           >
             <v-icon v-if="fab">mdi-close</v-icon>
             <v-icon v-else>mdi-view-quilt</v-icon>
@@ -27,7 +27,6 @@
         </template>
 
         <v-chip
-          class="mb-3 mr-10"
           v-for="link in links"
           :key="link.id"
           :color="link.color"
@@ -37,6 +36,7 @@
           filter
           :filter-icon="link.icon"
           target="blank"
+          class="mb-3 mr-10"
         >
           {{ link.title }}</v-chip
         >
@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  name: 'speedDial',
+  name: 'SpeedDial',
   data() {
     return {
       direction: 'top',
@@ -104,12 +104,6 @@ export default {
       }
     }
   },
-  methods: {
-    activate() {
-      this.show = false
-      setTimeout(() => (this.show = true), 50)
-    }
-  },
   watch: {
     top(val) {
       this.bottom = !val
@@ -122,6 +116,12 @@ export default {
     },
     left(val) {
       this.right = !val
+    }
+  },
+  methods: {
+    activate() {
+      this.show = false
+      setTimeout(() => (this.show = true), 50)
     }
   }
 }

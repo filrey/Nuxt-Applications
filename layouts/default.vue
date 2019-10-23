@@ -67,6 +67,11 @@ export default {
     bottomNav,
     speedDial
   },
+  head() {
+    return {
+      title: ''
+    }
+  },
   data() {
     return {
       clipped: false,
