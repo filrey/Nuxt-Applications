@@ -6,7 +6,7 @@
           v-for="card in cards"
           :key="card.title"
           :cols="card.flex"
-          :lg="4"
+          :lg="3"
           :sm="12"
         >
           <v-card>
@@ -68,7 +68,7 @@
       <div @click="overlay = !overlay">
         <v-overlay :value="overlay">
           <v-btn color="primary" class="mt-12">
-            Coming Soon!
+            Coming Soon or Private Repo
           </v-btn>
         </v-overlay>
       </div>
@@ -117,14 +117,9 @@ export default {
           sm: 12
         },
         {
-          title: 'Instant Insanity Solver',
-          src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg',
-          lg: 6,
-          sm: 12
-        },
-        {
-          title: 'Unity Tetris',
-          src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg',
+          title: 'CSUN Scholarship (HELIX)',
+          src: require('@/assets/jpg/Scholarship.JPG'),
+          live: 'https://www.csun.edu/faculty/scholarship',
           lg: 6,
           sm: 12
         }

@@ -33,7 +33,7 @@
         <v-icon>mdi-menu</v-icon>
       </v-btn>
     </v-app-bar> -->
-    <v-content class="random_pattern_green">
+    <v-content class="content-background">
       <v-container>
         <nuxt />
       </v-container>
@@ -97,3 +97,13 @@ export default {
   }
 }
 </script>
+
+<style lang="css">
+.content-background {
+  background-image: url(../assets/svg/Randomized-Pattern.svg);
+  background-color: #ffffff;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background by SVGBackgrounds.com */
+}
+</style>
