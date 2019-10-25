@@ -92,6 +92,13 @@ export default {
           sm: 12
         },
         {
+          title: 'CSUN Scholarship (HELIX)',
+          src: require('@/assets/jpg/Scholarship.JPG'),
+          live: 'https://www.csun.edu/faculty/scholarship',
+          lg: 6,
+          sm: 12
+        },
+        {
           title: 'Instant Insanity Solver',
           src: require('@/assets/jpg/II.JPG'),
           code: 'https://github.com/filrey/InstantInsanitySolver',
@@ -113,13 +120,6 @@ export default {
           src: require('@/assets/png/fos.png'),
           code: 'https://github.com/filrey/fictional-octo-succotash',
           live: 'https://filrey-fos.netlify.com',
-          lg: 6,
-          sm: 12
-        },
-        {
-          title: 'CSUN Scholarship (HELIX)',
-          src: require('@/assets/jpg/Scholarship.JPG'),
-          live: 'https://www.csun.edu/faculty/scholarship',
           lg: 6,
           sm: 12
         }
