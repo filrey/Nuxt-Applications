@@ -19,6 +19,7 @@
               :key="currIcon"
               :color="currColor"
               dark
+              x-large
               fab
               @click="activate()"
             >
@@ -38,7 +39,7 @@
           :filter-icon="link.icon"
           target="blank"
           class="mb-3 mr-10"
-          @click=";(currColor = link.color), (currIcon = link.icon)"
+          @click.stop=";(currColor = link.color), (currIcon = link.icon)"
         >
           {{ link.title }}</v-chip
         >

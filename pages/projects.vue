@@ -1,13 +1,14 @@
 <template>
   <div>
-    <v-container class="pa-3" fluid>
-      <v-row>
+    <v-container class="pa-3 width-80" fluid>
+      <v-row align="center" justify="center">
         <v-col
           v-for="card in cards"
           :key="card.title"
           :cols="card.flex"
-          :lg="3"
-          :sm="12"
+          :lg="4"
+          :sm="6"
+          :xs="12"
         >
           <v-card>
             <v-img
@@ -129,3 +130,10 @@ export default {
   }
 }
 </script>
+<style lang="css">
+@media only screen and (min-width: 768px) {
+  .width-80 {
+    width: 80%;
+  }
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-snackbar v-if="!isMobile" v-model="snackbar" :timeout="timeout">
+    <!-- <v-snackbar v-if="!isMobile" v-model="snackbar" :timeout="timeout">
       <v-tabs>
         <v-tab v-for="link in links" :key="link.id" :to="link.to">
           <v-icon>{{ link.icon }}</v-icon
@@ -15,8 +15,9 @@
           ></v-tab
         >
       </v-tabs>
-    </v-snackbar>
-    <speed-dial></speed-dial>
+    </v-snackbar> -->
+    <speed-dial-desktop v-if="!isMobile"></speed-dial-desktop>
+    <speed-dial v-else></speed-dial>
     <!-- <v-bottom-navigation v-else v-model="bottomNav" class="pa-1" fixed>
       <v-btn
         v-for="link in links"
@@ -33,11 +34,13 @@
 </template>
 <script>
 import speedDial from '~/components/speedDial.vue'
+import speedDialDesktop from '~/components/speedDialDesktop.vue'
 /* eslint-disable */
 export default {
   name: 'bottomNav',
   components: {
-    speedDial
+    speedDial,
+    speedDialDesktop
   },
   data() {
     return {

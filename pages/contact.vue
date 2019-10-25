@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-container>
-      <v-row>
-        <v-col>
+    <v-container fluid fill-height>
+      <v-row align="center" justify="center">
+        <v-col cols="12" sm="8" md="6">
           <v-card>
             <v-form
               class="ma-3"
@@ -10,7 +10,7 @@
               method="POST"
               data-netlify="true"
             >
-              <input type="hidden" name="form-name" value="MYFORM" />
+              <input type="hidden" name="contact" value="MYFORM" />
               <v-text-field label="Name" type="text" name="name">
                 <!-- <input type="text" name="name" /> -->
               </v-text-field>
