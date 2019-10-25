@@ -10,6 +10,7 @@
               method="POST"
               data-netlify="true"
             >
+              <input type="hidden" name="form-name" value="MYFORM" />
               <v-text-field label="Name" type="text" name="name">
                 <!-- <input type="text" name="name" /> -->
               </v-text-field>
