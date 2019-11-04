@@ -52,7 +52,7 @@ export default {
   name: 'SpeedDial',
   data() {
     return {
-      currColor: 'green',
+      currColor: 'blue',
       currIcon: 'mdi-home',
       direction: 'top',
       fab: false,
@@ -69,13 +69,13 @@ export default {
         {
           icon: 'mdi-home',
           title: 'Welcome',
-          color: 'green',
+          color: 'blue',
           to: '/'
         },
         {
           icon: 'mdi-view-quilt',
           title: 'Projects',
-          color: 'primary',
+          color: 'green',
           to: '/projects'
         },
         {

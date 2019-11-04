@@ -22,7 +22,7 @@
                 <!-- <label>Message: <textarea name="message"></textarea></label> -->
               </v-textarea>
               <div class="mb-3" data-netlify-recaptcha="true"></div>
-              <v-btn class="mb-3" color="primary" type="submit">Send</v-btn>
+              <v-btn class="mb-3" color="#01ADB5" type="submit">Send</v-btn>
             </v-form>
           </v-card>
         </v-col>
