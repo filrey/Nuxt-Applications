@@ -1,25 +1,31 @@
 <template>
   <v-flex>
     <v-carousel
-      cycle
+      :cycle="false"
+      :show-arrows="false"
       progress
-      height="350"
+      height="700"
       hide-delimiter-background
+      hide-delimiters
       show-arrows-on-hover
     >
-      <v-carousel-item v-for="(slide, i) in slides" :key="i">
-        <v-sheet color="primary" height="100%">
+      <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="slideImg[6]">
+        <!-- <v-sheet color="primary" height="100%">
           <v-row class="fill-height" align="center" justify="center">
             <div class="display-3 ma-2">{{ slide }}</div>
             <v-card>
-              <!-- <v-img
-                max-width="400"
-                max-height="250"
-                :src="slideImg[i]"
-              ></v-img> -->
+              <v-img :src="slideImg[i]"></v-img>
             </v-card>
           </v-row>
-        </v-sheet>
+        </v-sheet> -->
+        <v-img class="mx-sm-auto ma-lg-5" width="500" :src="logo"></v-img>
+        <a href="tel:818-647-5638">
+          <v-img
+            class="mx-sm-auto ma-lg-5 "
+            width="500"
+            :src="callToAction"
+          ></v-img>
+        </a>
       </v-carousel-item>
     </v-carousel>
 
@@ -180,19 +186,19 @@ export default {
         'red lighten-1',
         'deep-purple accent-4'
       ],
-      slides: [
-        'Welcome to 24 HR Painting Services!',
-        'Professional painters with over 10 years of experience',
-        'Exterior and Interior painting',
-        'Hardwood floor refinishing',
-        'Customer satisfaction is our top priority'
-      ],
+      slides: ['Welcome to 24 HR Painting Services!'],
+      logo: require('@/assets/logo.png'),
+      callToAction: require('@/assets/Call to action.png'),
       slideImg: [
         require('@/assets/24trailer.jpg'),
         require('@/assets/gallery/pic (5).jpg'),
         require('@/assets/gallery/pic (4).jpg'),
         require('@/assets/gallery/pic (11).jpg'),
-        require('@/assets/gallery/pic (12).jpg')
+        require('@/assets/gallery/pic (12).jpg'),
+        require('@/assets/gallery/t (1).jpg'),
+        require('@/assets/gallery/t (2).jpg'),
+        require('@/assets/gallery/t (3).jpg'),
+        require('@/assets/gallery/t (4).jpg')
       ],
       reviews: [
         {

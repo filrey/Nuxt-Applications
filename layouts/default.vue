@@ -1,30 +1,5 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
     <v-app-bar :clipped-left="clipped" fixed app light dense>
       <template v-slot:img="{ props }">
         <v-img
@@ -32,10 +7,7 @@
           gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
         ></v-img>
       </template>
-      <!-- <v-app-bar-nav-icon
-        class="ml-lg-12 mr-1"
-        @click.stop="drawer = !drawer"
-      ></v-app-bar-nav-icon> -->
+
       <v-btn class="ml-lg-12 mr-1" text depressed to="/">
         <b>
           <v-toolbar-title color="blue" v-text="title" />
@@ -43,8 +15,14 @@
       </v-btn>
       <div class="flex-grow-1"></div>
       <b v-if="user == null" class="mr-lg-12">
-        Give us a call today! ( 818 )- 647- 5638
+        Give us a call today!
+        <a href="tel:818-647-5638"
+          ><span style="font-weight:bold;padding-left:10px !important;">
+            818-647-5638</span
+          ></a
+        >
       </b>
+
       <v-avatar v-if="user" class="mr-1" size="36"
         ><img :src="photo" alt="avatar"
       /></v-avatar>
@@ -64,14 +42,6 @@
             <v-icon class="mr-1">{{ item.icon }}</v-icon>
             {{ item.title }}</v-tab
           >
-          <!-- <v-tab v-if="user == null" to="/login">
-            <v-icon class="mr-1">mdi-arrow-right-box</v-icon>
-            Login
-          </v-tab>
-          <v-tab v-if="user == null" to="/register">
-            <v-icon class="mr-1">mdi-file-document-box</v-icon>
-            Register
-          </v-tab> -->
         </v-tabs>
       </template>
     </v-app-bar>
@@ -131,7 +101,7 @@
 
 <script>
 import firebase from 'firebase'
-// import { mapState } from 'vuex'
+
 export default {
   name: 'Nav',
   data() {
