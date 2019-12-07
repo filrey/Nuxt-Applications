@@ -8,13 +8,13 @@
         ></v-img>
       </template>
 
-      <v-btn class="ml-lg-12 mr-1" text depressed to="/">
+      <v-btn class="mr-1" text depressed to="/">
         <b>
           <v-toolbar-title color="blue" v-text="title" />
         </b>
       </v-btn>
       <div class="flex-grow-1"></div>
-      <b v-if="user == null" class="mr-lg-12">
+      <b v-if="user == null" class="d-none d-sm-block">
         Give us a call today!
         <a href="tel:818-647-5638"
           ><span style="font-weight:bold;padding-left:10px !important;">
@@ -33,11 +33,7 @@
       </v-btn>
 
       <template v-slot:extension>
-        <v-tabs
-          class="ml-lg-12 mr-1"
-          align-with-title
-          background-color="grey lighten-5"
-        >
+        <v-tabs align-with-title background-color="grey lighten-5">
           <v-tab v-for="(item, i) in items" :key="i" :to="item.to">
             <v-icon class="mr-1">{{ item.icon }}</v-icon>
             {{ item.title }}</v-tab
