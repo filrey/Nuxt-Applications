@@ -22,7 +22,7 @@
             name="review"
             type="text"
           ></v-text-field>
-          <v-rating half-increments v-model="rating"></v-rating>
+          <v-rating v-model="rating" half-increments></v-rating>
         </v-form>
         <!-- </button> -->
         <v-btn @click="writeToFirestore">
@@ -39,7 +39,7 @@
 import firebase from 'firebase'
 import { fireDb } from '~/plugins/firebase.js'
 export default {
-  name: 'contactUs',
+  name: 'ContactUs',
   data() {
     return {
       writeSuccessful: false,
@@ -61,10 +61,10 @@ export default {
         .collection('Reviews')
         .add(document)
         .then(function(docRef) {
-          console.log('Document written with ID: ', docRef.id)
+          // console.log('Document written with ID: ', docRef.id)
         })
         .catch(function(error) {
-          console.error('Error adding document: ', error)
+          this.$snotify.error(error.message)
         })
 
       this.writeSuccessful = true
@@ -82,7 +82,7 @@ export default {
         })
         .catch((e) => {
           this.$snotify.error(e.message)
-          console.log(e)
+          // console.log(e)
         })
     },
     returnDate() {

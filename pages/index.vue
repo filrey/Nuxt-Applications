@@ -186,7 +186,7 @@
 <script>
 import yelpReviews from '@/components/yelpReviews.vue'
 export default {
-  name: 'index',
+  name: 'Index',
   components: {
     yelpReviews
   },

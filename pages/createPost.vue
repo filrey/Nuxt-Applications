@@ -11,10 +11,10 @@
           <v-layout row>
             <v-flex xs12 sm6 offset-sm3>
               <v-text-field
-                name="title"
-                label="Title"
                 id="title"
                 v-model="title"
+                name="title"
+                label="Title"
                 required
               ></v-text-field>
             </v-flex>
@@ -22,10 +22,10 @@
           <v-layout row>
             <v-flex xs12 sm6 offset-sm3>
               <v-text-field
-                name="location"
-                label="Location"
                 id="location"
                 v-model="location"
+                name="location"
+                label="Location"
                 required
               ></v-text-field>
             </v-flex>
@@ -36,9 +36,9 @@
                 >Upload Image</v-btn
               >
               <input
+                ref="fileInput"
                 type="file"
                 style="display: none"
-                ref="fileInput"
                 accept="image/*"
                 @change="onFilePicked"
               />
@@ -52,11 +52,11 @@
           <v-layout row>
             <v-flex xs12 sm6 offset-sm3>
               <v-text-field
-                name="description"
-                label="Body"
                 id="description"
-                multi-line
                 v-model="description"
+                label="Body"
+                name="description"
+                multi-line
                 required
               ></v-text-field>
             </v-flex>

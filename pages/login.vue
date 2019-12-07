@@ -38,7 +38,7 @@
               </v-card-text>
               <v-card-actions>
                 <div class="flex-grow-1"></div>
-                <v-btn @click="login" color="primary">Login</v-btn>
+                <v-btn color="primary" @click="login">Login</v-btn>
               </v-card-actions>
               <v-divider></v-divider>
               <v-card-actions class="text-left">
@@ -64,7 +64,7 @@
 <script>
 import firebase from 'firebase'
 export default {
-  name: 'login',
+  name: 'Login',
   props: {},
   data: () => ({
     drawer: null,
@@ -95,7 +95,6 @@ export default {
         })
         .catch((e) => {
           this.$snotify.error(e.message)
-          console.log(e)
         })
     }
   }

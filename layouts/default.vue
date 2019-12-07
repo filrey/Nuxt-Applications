@@ -28,7 +28,7 @@
       /></v-avatar>
       <b v-if="user"> {{ name }} </b>
 
-      <v-btn class="ml-3" outlined v-if="user != null" @click="logout">
+      <v-btn v-if="user != null" class="ml-3" outlined @click="logout">
         Log Out
       </v-btn>
 
@@ -180,7 +180,6 @@ export default {
       }
     })
   },
-  computed: {},
   methods: {
     logout() {
       firebase

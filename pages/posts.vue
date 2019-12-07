@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout row wrap v-for="post in posts" :key="post.id" class="mb-2">
+    <v-layout v-for="post in posts" :key="post.id" row wrap class="mb-2">
       <v-flex xs12 sm10 md8 offset-sm1 offset-md2>
         <v-card class="info">
           <v-container>
@@ -32,14 +32,14 @@
 
 <script>
 export default {
-  name: 'posts',
-  created() {
-    this.$store.dispatch('loadPosts')
-  },
+  name: 'Posts',
   computed: {
     posts() {
       return this.$store.getters.loadedPosts
     }
+  },
+  created() {
+    this.$store.dispatch('loadPosts')
   }
 }
 </script>
