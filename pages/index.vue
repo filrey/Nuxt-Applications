@@ -272,8 +272,9 @@ export default {
     }
   },
   beforeMount() {
-    this.$store.dispatch('loadPosts')
-    this.$store.dispatch('loadReviews')
+    // Disabling for the time being
+    // this.$store.dispatch('loadPosts')
+    // this.$store.dispatch('loadReviews')
   }
 }
 </script>
