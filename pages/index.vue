@@ -144,7 +144,7 @@
               >See what our customers have to say</v-card-title
             >
             <!-- Reviews -->
-            <yelp-Reviews></yelp-Reviews>
+            <!-- <yelp-Reviews></yelp-Reviews> -->
 
             <!-- <div v-for="review in reviews" :key="review.id">
               <v-avatar class="mt-1" size="48">
@@ -184,11 +184,11 @@
 </template>
 
 <script>
-import yelpReviews from '@/components/yelpReviews.vue'
+// import yelpReviews from '@/components/yelpReviews.vue'
 export default {
   name: 'Index',
   components: {
-    yelpReviews
+    // yelpReviews
   },
   data() {
     return {
