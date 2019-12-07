@@ -18,20 +18,31 @@
             </v-card>
           </v-row>
         </v-sheet> -->
-        <v-img class="mx-sm-auto ma-lg-5" width="500" :src="logo"></v-img>
-        <a href="tel:818-647-5638">
-          <v-img
-            class="mx-sm-auto ma-lg-5 "
-            width="500"
-            :src="callToAction"
-          ></v-img>
-        </a>
+        <v-row justify="center">
+          <v-col :lg="8" :sm="12">
+            <v-img class="mx-sm-auto ma-lg-5" width="500" :src="logo"></v-img>
+          </v-col>
+          <v-col :lg="4" :sm="12">
+            <v-img
+              class="mx-sm-auto ma-lg-5"
+              width="500"
+              :src="customer"
+            ></v-img>
+            <a href="tel:818-647-5638">
+              <v-img
+                class="mx-sm-auto ma-lg-5 "
+                width="500"
+                :src="callToAction"
+              ></v-img>
+            </a>
+          </v-col>
+        </v-row>
       </v-carousel-item>
     </v-carousel>
 
     <v-card class="mx-auto" flat>
       <v-row justify="center">
-        <v-col :lg="4" :sm="12">
+        <!-- <v-col :lg="4" :sm="12">
           <div id="firstCol">
             <v-card
               v-for="post in posts"
@@ -40,7 +51,7 @@
               class="ma-2"
               color="grey lighten-3"
             >
-              <!-- <v-img :src="post.imageUrl"></v-img> -->
+
               <v-list-item three-line>
                 <v-list-item-avatar size="125" tile>
                   <v-img :src="post.imageUrl"></v-img>
@@ -58,10 +69,11 @@
               </v-list-item>
             </v-card>
           </div>
-        </v-col>
-        <v-col :lg="4" :sm="12">
+        </v-col> -->
+        <v-col :lg="8" :sm="12">
           <div id="middleCol">
             <!-- Text Content -->
+
             <div id="Text Content">
               <v-card-title class="headline">24 Hr Service</v-card-title>
               <v-card-text>
@@ -132,10 +144,10 @@
               >See what our customers have to say</v-card-title
             >
             <!-- Reviews -->
-            <div v-for="review in reviews" :key="review.id">
+            <yelp-Reviews></yelp-Reviews>
+
+            <!-- <div v-for="review in reviews" :key="review.id">
               <v-avatar class="mt-1" size="48">
-                <!-- <img :src="review.photo" alt=""
-              /> -->
                 <v-icon large>mdi-account</v-icon>
               </v-avatar>
               <h4>{{ review.name }}</h4>
@@ -152,31 +164,32 @@
                 size="35"
                 color="primary"
               ></v-rating>
-            </div>
+            </div> -->
           </div>
         </v-col>
       </v-row>
     </v-card>
 
-    <v-parallax :src="require('@/assets/wall-unfinshed.jpg')" height="400">
+    <!-- <v-parallax :src="require('@/assets/wall-unfinshed.jpg')" height="400">
       <v-overlay absolute>
         <v-layout column align-center justify-center>
           <div class="headline white--text mb-3 text-xs-center">
             We always stand behind our work, with customer satisfaction being
             our #1 priority.
           </div>
-          <!-- <v-btn class="blue lighten-2 mt-5" dark large href=""
-          >Create an appointment</v-btn
-        > -->
         </v-layout>
       </v-overlay>
-    </v-parallax>
+    </v-parallax> -->
   </v-flex>
 </template>
 
 <script>
+import yelpReviews from '@/components/yelpReviews.vue'
 export default {
   name: 'index',
+  components: {
+    yelpReviews
+  },
   data() {
     return {
       colors: [
@@ -189,6 +202,7 @@ export default {
       slides: ['Welcome to 24 HR Painting Services!'],
       logo: require('@/assets/logo.png'),
       callToAction: require('@/assets/Call to action.png'),
+      customer: require('@/assets/customer satisfaction.png'),
       slideImg: [
         require('@/assets/24trailer.jpg'),
         require('@/assets/gallery/pic (5).jpg'),

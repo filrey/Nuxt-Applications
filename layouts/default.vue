@@ -91,8 +91,8 @@
         </v-card-title>
 
         <v-card-actions class="grey darken-3 justify-center">
-          {{ new Date().getFullYear() }} — <strong>Powered by Vuejs</strong>
-          <i class="fab fa-vuejs"></i>
+          {{ new Date().getFullYear() }} —
+          <strong>24HRPAINTINGSERVICES LLC</strong>
         </v-card-actions>
       </v-card>
     </v-footer>
@@ -125,12 +125,12 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'About',
           to: '/about'
-        },
-        {
-          icon: 'mdi-message',
-          title: 'Contact us',
-          to: '/contactUs'
         }
+        // {
+        //   icon: 'mdi-message',
+        //   title: 'Contact us',
+        //   to: '/contactUs'
+        // }
       ],
       miniVariant: false,
       right: true,
