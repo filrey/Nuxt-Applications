@@ -1,27 +1,32 @@
 <template>
   <v-app>
-    <v-app-bar :clipped-left="clipped" fixed app light dense>
-      <template v-slot:img="{ props }">
+    <v-app-bar :clipped-left="clipped" elevate-on-scroll fixed app light dense>
+      <!-- <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
           gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
         ></v-img>
-      </template>
+      </template> -->
 
-      <v-btn class="mr-1" text depressed to="/">
-        <b>
-          <v-toolbar-title color="blue" v-text="title" />
-        </b>
-      </v-btn>
-      <div class="flex-grow-1"></div>
-      <b v-if="user == null" class="d-none d-sm-block">
+      <v-img max-width="388px" :src="logoN"></v-img>
+
+      <div class="ml-auto">
+        <v-tabs align-with-title background-color="grey lighten-5">
+          <v-tab v-for="(item, i) in items" :key="i" :to="item.to">
+            <v-icon class="mr-1">{{ item.icon }}</v-icon>
+            {{ item.title }}</v-tab
+          >
+        </v-tabs>
+      </div>
+
+      <!-- <b v-if="user == null" class="d-none d-sm-block">
         Give us a call today!
         <a href="tel:818-647-5638"
           ><span style="font-weight:bold;padding-left:10px !important;">
             818-647-5638</span
           ></a
         >
-      </b>
+      </b> -->
 
       <v-avatar v-if="user" class="mr-1" size="36"
         ><img :src="photo" alt="avatar"
@@ -32,14 +37,14 @@
         Log Out
       </v-btn>
 
-      <template v-slot:extension>
+      <!-- <template v-slot:extension>
         <v-tabs align-with-title background-color="grey lighten-5">
           <v-tab v-for="(item, i) in items" :key="i" :to="item.to">
             <v-icon class="mr-1">{{ item.icon }}</v-icon>
             {{ item.title }}</v-tab
           >
         </v-tabs>
-      </template>
+      </template> -->
     </v-app-bar>
 
     <v-content>
@@ -109,6 +114,8 @@ export default {
       userId: '',
       name: '',
       email: '',
+      logo: require('@/assets/logo.png'),
+      logoN: require('@/assets/logoN.png'),
       user: null,
       banner: require('@/assets/banner.jpg'),
       items: [
