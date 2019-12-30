@@ -41,6 +41,8 @@
     </v-carousel>
 
     <content-nav></content-nav>
+    <contact-form></contact-form>
+
     <v-card class="mx-auto" flat>
       <v-row justify="center">
         <!-- <v-col :lg="4" :sm="12">
@@ -187,11 +189,14 @@
 <script>
 import yelpReviews from '@/components/yelpReviews.vue'
 import contentNav from '@/components/contentNav.vue'
+import contactForm from '@/components/contactForm.vue'
+
 export default {
   name: 'Index',
   components: {
     yelpReviews,
-    contentNav
+    contentNav,
+    contactForm
   },
   data() {
     return {
