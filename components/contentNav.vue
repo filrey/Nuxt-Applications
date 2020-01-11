@@ -10,11 +10,11 @@
           <h1 class="display-1 font-weight-thin mb-4 black--text">
             Vuetify.js
           </h1>
-          <v-btn fab height="150px" width="150px" color="indigo">lol</v-btn>
-          <v-btn fab height="150px" width="150px" color="indigo">lol</v-btn>
-          <v-btn fab height="150px" width="150px" color="indigo">lol</v-btn>
-          <v-btn fab height="150px" width="150px" color="indigo">lol</v-btn>
-          <v-btn fab height="150px" width="150px" color="indigo">lol</v-btn>
+          <v-btn fab height="150px" width="150px" color="indigo">Link</v-btn>
+          <v-btn fab height="150px" width="150px" color="indigo">Link</v-btn>
+          <v-btn fab height="150px" width="150px" color="indigo">Link</v-btn>
+          <v-btn fab height="150px" width="150px" color="indigo">Link</v-btn>
+          <v-btn fab height="150px" width="150px" color="indigo">Link</v-btn>
         </v-col>
       </v-row>
     </v-parallax>

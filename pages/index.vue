@@ -10,14 +10,6 @@
       show-arrows-on-hover
     >
       <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="slideImg[6]">
-        <!-- <v-sheet color="primary" height="100%">
-          <v-row class="fill-height" align="center" justify="center">
-            <div class="display-3 ma-2">{{ slide }}</div>
-            <v-card>
-              <v-img :src="slideImg[i]"></v-img>
-            </v-card>
-          </v-row>
-        </v-sheet> -->
         <v-row justify="center">
           <v-col :lg="8" :sm="12">
             <v-img class="mx-sm-auto ma-lg-5" width="500" :src="logo"></v-img>
@@ -40,7 +32,8 @@
       </v-carousel-item>
     </v-carousel>
 
-    <content-nav></content-nav>
+    <!-- Still Under Construction -->
+    <!-- <content-nav></content-nav> -->
     <contact-form></contact-form>
 
     <v-card class="mx-auto" flat>
@@ -73,46 +66,8 @@
             </v-card>
           </div>
         </v-col> -->
-        <v-col :lg="8" :sm="12">
+        <v-col :lg="12" :sm="12">
           <div id="middleCol">
-            <!-- Text Content -->
-
-            <div id="Text Content">
-              <v-card-title class="headline">24 Hr Service</v-card-title>
-              <v-card-text>
-                <p>
-                  With a wide range of services that suit your every need and
-                  requirement, We at 24Hr Service have the know-how and the
-                  expertise to get the job done! Let us know how we can help,and
-                  we will guarantee your experience with our professionals is
-                  enjoyable and satisfactory. We love to hear from our
-                  costumers, so feel free to contact us with your feedback!
-                </p>
-              </v-card-text>
-              <v-card-title class="headline">Based In Socal</v-card-title>
-              <v-card-text>
-                <p>
-                  Skip your search for house painters near you; contact the
-                  professional and industry experts . We serve the communities
-                  in Los Angeles, Thousand Oaks, Ventura, and neighboring cities
-                  in California. Contact us today to have the experts handle
-                  your exterior painting in summer.
-                </p>
-              </v-card-text>
-              <v-card-title class="headline"
-                >Improve your home value</v-card-title
-              >
-              <v-card-text>
-                <p>
-                  Are you putting your home on the market this year? Tick curb
-                  appeal off your list as soon as you get a new paint job! Your
-                  home will look great and it’ll be in top condition!
-                </p>
-              </v-card-text>
-              <v-card-actions>
-                <v-spacer />
-              </v-card-actions>
-            </div>
             <!-- Gallery Content -->
             <v-container grid-list-sm fluid>
               <v-layout row wrap>
@@ -141,33 +96,13 @@
             </v-container>
           </div>
         </v-col>
-        <v-col :lg="4" :sm="12">
+        <v-col :lg="12" :sm="12">
           <div id="lastCol" class="text-center">
             <v-card-title class="headline"
               >See what our customers have to say</v-card-title
             >
             <!-- Reviews -->
             <yelp-Reviews></yelp-Reviews>
-
-            <!-- <div v-for="review in reviews" :key="review.id">
-              <v-avatar class="mt-1" size="48">
-                <v-icon large>mdi-account</v-icon>
-              </v-avatar>
-              <h4>{{ review.name }}</h4>
-              <h5>{{ review.date }}</h5>
-              <v-card-text>
-                <p>
-                  {{ review.text }}
-                </p>
-              </v-card-text>
-              <v-rating
-                half-increments
-                readonly
-                :value="review.rating"
-                size="35"
-                color="primary"
-              ></v-rating>
-            </div> -->
           </div>
         </v-col>
       </v-row>
@@ -188,14 +123,14 @@
 
 <script>
 import yelpReviews from '@/components/yelpReviews.vue'
-import contentNav from '@/components/contentNav.vue'
+// import contentNav from '@/components/contentNav.vue'
 import contactForm from '@/components/contactForm.vue'
 
 export default {
   name: 'Index',
   components: {
     yelpReviews,
-    contentNav,
+    // contentNav,
     contactForm
   },
   data() {

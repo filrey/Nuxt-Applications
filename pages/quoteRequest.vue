@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section>
     <div>
       <!-- Request a quote -->
       <h2>
@@ -39,6 +39,12 @@
             label="How did you hear about us?"
             required
           ></v-select>
+          <v-text-field
+            v-model="description"
+            label="Description"
+            name="description"
+            type="text"
+          ></v-text-field>
           <v-text-field
             v-model="description"
             label="Description"
