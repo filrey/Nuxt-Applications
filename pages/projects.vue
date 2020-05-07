@@ -87,7 +87,7 @@ export default {
         {
           title: 'LuvApp',
           src: require('@/assets/jpg/LuvApp.JPG'),
-          code: 'https://github.com/filrey/Nuxt-Applications/tree/24hrpainting',
+          code: 'https://github.com/filrey/LuvApp',
           live: 'https://luvapp.azurewebsites.net/',
           lg: 6,
           sm: 12
