@@ -86,7 +86,7 @@ export default {
           to: '/contact'
         },
         {
-          icon: 'mdi-file-document-box-outline',
+          icon: 'mdi-file-document',
           title: 'Resume',
           color: 'black',
           resumeUrl:

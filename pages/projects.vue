@@ -85,6 +85,14 @@ export default {
     return {
       cards: [
         {
+          title: 'LuvApp',
+          src: require('@/assets/jpg/LuvApp.JPG'),
+          code: 'https://github.com/filrey/Nuxt-Applications/tree/24hrpainting',
+          live: 'https://luvapp.azurewebsites.net/',
+          lg: 6,
+          sm: 12
+        },
+        {
           title: '24HrPaintingServices Business Site',
           src: require('@/assets/jpg/24flier.JPG'),
           code: 'https://github.com/filrey/Nuxt-Applications/tree/24hrpainting',
