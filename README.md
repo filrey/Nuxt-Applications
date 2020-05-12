@@ -1,6 +1,6 @@
-# first-nuxt-app
+# Nuxt-Applications
 
-> My posh Nuxt.js project
+> Respository of my projects built with Nuxt!
 
 ## Build Setup
 
