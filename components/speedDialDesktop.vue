@@ -90,7 +90,7 @@ export default {
           title: 'Resume',
           color: 'black',
           resumeUrl:
-            'https://drive.google.com/open?id=1TZvGAzwjQs67gkohQ-FqJ88pBPKpvZRa'
+            'https://drive.google.com/open?id=1sZ9xtxoL7zoTen-CdcelTIt9nf2VaYHw'
         }
       ]
     }

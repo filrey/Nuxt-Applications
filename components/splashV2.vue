@@ -18,17 +18,26 @@
           I am a software developer specializing in web development.
         </p>
         <p>
-          Check out some of the work I have done under the projects section. My
-          resume
-          <a
-            href="https://drive.google.com/open?id=1uNQouPHsOXyAUWccbwkQ1uqNzBRwlB3t"
+          Check out some of the work I have done under the projects section
+          here.
+          <v-btn color="green" to="/projects" target="blank">
+            <v-icon class="mr-1">mdi-view-quilt</v-icon>
+            Projects
+          </v-btn>
+          <br />
+          Or view my resume.
+          <v-btn
+            color="black"
+            href="https://drive.google.com/open?id=1sZ9xtxoL7zoTen-CdcelTIt9nf2VaYHw"
             target="blank"
-            >View</a
           >
+            <v-icon class="mr-1">mdi-file-document</v-icon>
+            Resume
+          </v-btn>
         </p>
         <p>
-          Remotely available from Los Angeles. If you want to get in touch about
-          a project collaboration feel free to shoot me an email at
+          I'm remotely available. If you want to get in touch about a project
+          collaboration feel free to shoot me an email at
           filibertoreyes55@gmail.com
         </p>
 
