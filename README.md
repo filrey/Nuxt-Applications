@@ -1,6 +1,6 @@
-# first-nuxt-app
+# 24Hr Painting Company
 
-> My posh Nuxt.js project
+> Business landing site for 24 Hr Painting Company https://24hrpaintingservices.com/
 
 ## Build Setup
 
