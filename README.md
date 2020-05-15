@@ -1,12 +1,12 @@
-# first-nuxt-app
+# Nuxt-Application
 
-> My posh Nuxt.js project
+> Business site for 24 HR Painting Services
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
-$ npm run install
+$ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
