@@ -1,8 +1,36 @@
-<template>
-  <div>
-    Contact.vue
-  </div>
-</template>
 <script>
-export default {};
+// Extensions
+import Section from '@/sections/View';
+
+// Mixins
+import LoadSections from '@/mixins/load-sections';
+
+export default {
+  name: 'ContactUs',
+
+  metaInfo: { title: 'Contact Us' },
+
+  meta: {
+    src: require('@/assets/contact.jpg')
+  },
+
+  extends: Section,
+
+  mixins: [
+    LoadSections([
+      'hero-alt',
+      'keep-in-touch',
+      'map',
+      'newsletter',
+      'pro-features'
+    ])
+  ],
+
+  props: {
+    id: {
+      type: String,
+      default: 'about'
+    }
+  }
+};
 </script>

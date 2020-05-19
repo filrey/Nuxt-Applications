@@ -17,16 +17,9 @@
           justify="center"
         >
           <v-col cols="12">
-            <base-heading
-              :title="title"
-              space="2"
-              weight="500"
-            />
+            <base-heading :title="title" space="2" weight="500" />
 
-            <base-divider
-              color="primary"
-              dense
-            />
+            <base-divider color="primary" dense />
 
             <v-breadcrumbs
               :items="items"
@@ -41,51 +34,53 @@
 </template>
 
 <script>
-  // Components
-  import {
-    HexToRGBA,
-    RGBAtoCSS,
-  } from 'vuetify/lib/util/colorUtils'
+// Components
+import {
+  HexToRGBA,
+  RGBAtoCSS
+} from '@/node_modules/vuetify/lib/util/colorUtils';
 
-  export default {
-    name: 'SectionHeroAlt',
+export default {
+  name: 'SectionHeroAlt',
 
-    metaInfo () {
-      return {
-        changed: meta => (this.title = meta.titleChunk.toUpperCase()),
+  metaInfo() {
+    return {
+      changed: (meta) => (this.title = meta.titleChunk.toUpperCase())
+    };
+  },
+
+  provide: {
+    heading: { align: 'center' }
+  },
+
+  data: () => ({
+    title: ''
+  }),
+
+  computed: {
+    gradient() {
+      const color = `${this.$vuetify.theme.themes.light.secondary}CC`;
+      const overlay = RGBAtoCSS(HexToRGBA(color));
+
+      return `to top, ${overlay}, ${overlay}`;
+    },
+    src() {
+      if (this.$route.name == 'contact') {
+        return require('@/assets/contact.jpg');
+      } else if (this.$route.name == 'about') {
+        return require('@/assets/about.jpg');
       }
+      return '';
     },
-
-    provide: {
-      heading: { align: 'center' },
-    },
-
-    data: () => ({
-      title: '',
-    }),
-
-    computed: {
-      gradient () {
-        const color = `${this.$vuetify.theme.themes.light.secondary}CC`
-        const overlay = RGBAtoCSS(HexToRGBA(color))
-
-        return `to top, ${overlay}, ${overlay}`
-      },
-      src () {
-        return this.$route.meta.src
-      },
-      items () {
-        return [
-          { text: 'HOME', to: '/' },
-          { text: this.title },
-        ]
-      },
-    },
+    items() {
+      return [{ text: 'HOME', to: '/' }, { text: this.title }];
+    }
   }
+};
 </script>
 
 <style lang="sass">
-  #hero-alt
-    .v-breadcrumbs__item
-      color: #FFFFFF
+#hero-alt
+  .v-breadcrumbs__item
+    color: #FFFFFF
 </style>

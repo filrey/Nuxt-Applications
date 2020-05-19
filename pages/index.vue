@@ -1,25 +1,37 @@
-<template>
-  <div>
-    <hero />
-  </div>
-</template>
-
 <script>
+// Extensions
+import Section from '@/sections/View';
+
+// Mixins
+import LoadSections from '@/mixins/load-sections';
+
 export default {
-  components: {
-    AboutOurProduct: () => import('@/sections/AboutOurProduct'),
-    Affiliates: () => import('@/sections/Affiliates'),
-    ContactUs: () => import('@/sections/ContactUs'),
-    Features: () => import('@/sections/Features'),
-    Hero: () => import('@/sections/Hero'),
-    HeroAlt: () => import('@/sections/HeroAlt'),
-    Info: () => import('@/sections/Info'),
-    KeepInTouch: () => import('@/sections/KeepInTouch'),
-    Map: () => import('@/sections/Map'),
-    NewsLetter: () => import('@/sections/Newsletter'),
-    ProFeatures: () => import('@/sections/ProFeatures'),
-    SocialMedia: () => import('@/sections/SocialMedia'),
-    ThemeFeatures: () => import('@/sections/ThemeFeatures')
+  name: 'Home',
+
+  metaInfo: { title: 'Home' },
+
+  extends: Section,
+
+  mixins: [
+    LoadSections([
+      'hero',
+      'theme-features',
+      'features',
+      'contact-us',
+      'affiliates',
+      'social-media',
+      'keep-in-touch',
+      'newsletter',
+      'pro-features',
+      'info'
+    ])
+  ],
+
+  props: {
+    id: {
+      type: String,
+      default: 'home'
+    }
   }
 };
 </script>
