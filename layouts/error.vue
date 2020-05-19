@@ -1,44 +1,24 @@
-<template>
-  <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
-  </v-app>
-</template>
-
 <script>
+// Extensions
+import View from '@/sections/View';
+
+// Mixins
+import LoadSections from '@/mixins/load-sections';
+
 export default {
-  layout: 'empty',
+  name: 'FourOhFour',
+
+  metaInfo: { title: 'Oops! No Page Found' },
+
+  extends: View,
+
+  mixins: [LoadSections(['404', 'newsletter', 'info'])],
+
   props: {
-    error: {
-      type: Object,
-      default: null
-    }
-  },
-  data () {
-    return {
-      pageNotFound: '404 Not Found',
-      otherError: 'An error occurred'
-    }
-  },
-  head () {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
-    return {
-      title
+    id: {
+      type: String,
+      default: 'about'
     }
   }
-}
+};
 </script>
-
-<style scoped>
-h1 {
-  font-size: 20px;
-}
-</style>
