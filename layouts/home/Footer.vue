@@ -1,17 +1,11 @@
 <template>
-  <v-footer
-    id="home-footer"
-    color="grey darken-4"
-    dark
-    min-height="72"
-  >
+  <v-footer id="home-footer" color="grey darken-4" dark min-height="72">
     <v-container>
       <v-row>
-        <v-col
-          cols="12"
-          md="6"
-        >
-          <div class="d-flex flex-wrap justify-md-start justify-center justify-md-none">
+        <v-col cols="12" md="6">
+          <div
+            class="d-flex flex-wrap justify-md-start justify-center justify-md-none"
+          >
             <template v-for="(s, i) in social">
               <a
                 :key="s"
@@ -32,12 +26,8 @@
           </div>
         </v-col>
 
-        <v-col
-          class="text-center text-md-right"
-          cols="12"
-          md="6"
-        >
-          Copyright &copy; 2020 Vuetify, LLC
+        <v-col class="text-center text-md-right" cols="12" md="6">
+          Copyright &copy; 2020 24HRPAINTINGSERVICES, LLC
         </v-col>
       </v-row>
     </v-container>
@@ -45,21 +35,16 @@
 </template>
 
 <script>
-  export default {
-    name: 'HomeFooter',
+export default {
+  name: 'HomeFooter',
 
-    data: () => ({
-      social: [
-        'Facebook',
-        'Twitter',
-        'Instagram',
-        'Linkedin',
-      ],
-    }),
-  }
+  data: () => ({
+    social: ['Facebook', 'Twitter', 'Instagram', 'Linkedin']
+  })
+};
 </script>
 
 <style lang="sass">
-  #home-footer a
-    text-decoration: none
+#home-footer a
+  text-decoration: none
 </style>

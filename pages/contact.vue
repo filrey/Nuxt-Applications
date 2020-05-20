@@ -8,7 +8,7 @@ import LoadSections from '@/mixins/load-sections';
 export default {
   name: 'ContactUs',
 
-  metaInfo: { title: 'Contact Us' },
+  metaInfo: { title: '24HrPaintingServices - Contact Us' },
 
   meta: {
     src: require('@/assets/contact.jpg')

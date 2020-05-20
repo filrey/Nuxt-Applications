@@ -2,9 +2,9 @@
   <section id="hero">
     <v-img
       :min-height="minHeight"
-      :src="require('@/assets/home-hero.jpg')"
+      :src="require('@/assets/home-hero1.jpg')"
       class="white--text"
-      gradient="to right, rgba(5, 11, 31, .8), rgba(5, 11, 31, .8)"
+      gradient="to right, rgba(5, 11, 31, .7), rgba(5, 11, 31, .7)"
     >
       <v-container class="fill-height px-4 py-12">
         <v-responsive
@@ -13,14 +13,24 @@
           max-width="700"
           width="100%"
         >
-          <base-heading title="PROMOTE YOUR BUSINESS WITH ZERO" />
+          <!-- <base-img
+            :src="require('@/assets/logo.png')"
+            class="mr-3 hidden-xs-only"
+            contain
+            max-width="500"
+            width="100%"
+          /> -->
+          <base-heading title="WE ARE 24 HR PAINTING SERVICES" />
 
           <base-body>
-            Infographic hypotheses influencer user experience Long madel ture
-            gen-z paradigm shift client partner network product seilans solve
-            management influencer analytics leverage virality. incubator seed
-            round massmarket. buyer agile development growth hacking
-            business-to-consumer ecosystem
+            We are professional painters with over 10 years of experience on a
+            wide variety of projects and surfaces which makes us capable of any
+            type of job. We have experience in painting outdoor and indoor
+            surfaces made of all materials, such as wood, concrete, or brick.
+            Proficient at performing any repairs: filling holes or replacing
+            bare wood; knowledgeable of different types and shades of paint to
+            use for specific projects. We are efficient at what we do and we are
+            confident we can deliver on your dream project.
           </base-body>
 
           <div
@@ -40,6 +50,14 @@
             <base-btn :ripple="false" class="pa-1" height="auto" text>
               Get Started Now
             </base-btn>
+
+            <base-img
+              :src="require('@/assets/customer satisfaction.png')"
+              class="mr-3 mt-7 hidden-xs-only"
+              contain
+              max-width="500"
+              width="100%"
+            />
           </div>
         </v-responsive>
       </v-container>
