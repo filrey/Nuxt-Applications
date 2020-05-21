@@ -1,5 +1,5 @@
 <template>
-  <base-info-card title="Features">
+  <base-info-card title="Why choose 24 HR">
     <a
       v-for="feature in features"
       :key="feature"
@@ -12,17 +12,16 @@
 </template>
 
 <script>
-  export default {
-    name: 'SectionFeaturesAlt',
+export default {
+  name: 'SectionFeaturesAlt',
 
-    data: () => ({
-      features: [
-        'Zero Installation',
-        'Easy Customization',
-        'User Friendly Design',
-        '24/7 Support Desk',
-        'SEO Optimized',
-      ],
-    }),
-  }
+  data: () => ({
+    features: [
+      '24 Hour Service',
+      'Lightning fast',
+      'Top rated professionals',
+      'Free Quote'
+    ]
+  })
+};
 </script>

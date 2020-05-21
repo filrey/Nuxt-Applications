@@ -7,11 +7,13 @@
             class="d-flex flex-wrap justify-md-start justify-center justify-md-none"
           >
             <template v-for="(s, i) in social">
+              <!-- <i :class="s.icon"></i> -->
               <a
-                :key="s"
+                :key="s.id"
                 class="white--text pa-1 pa-md-0"
-                href="#"
-                v-text="s"
+                :href="s.url"
+                target="blank"
+                v-text="s.title"
               />
 
               <v-responsive
@@ -39,7 +41,21 @@ export default {
   name: 'HomeFooter',
 
   data: () => ({
-    social: ['Facebook', 'Twitter', 'Instagram', 'Linkedin']
+    social: [
+      {
+        title: 'Facebook',
+        url: 'https://www.facebook.com/24horas199/'
+      },
+      {
+        title: 'Instagram',
+        url:
+          'https://instagram.com/javierlopezfred199?utm_source=ig_profile_share&igshid=u32rvjvhubrh'
+      },
+      {
+        title: 'Yelp',
+        url: 'https://www.yelp.com/biz/24hr-painting-services-los-angeles-2'
+      }
+    ]
   })
 };
 </script>

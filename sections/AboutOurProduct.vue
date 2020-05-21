@@ -2,18 +2,13 @@
   <base-section id="about-our-product">
     <base-section-heading
       color="grey lighten-2"
-      icon="mdi-vuetify"
-      title="About our Product"
+      icon="mdi-check"
+      title="Customer Satisfaction is our #1 priority"
     />
 
     <v-container>
       <v-row>
-        <v-col
-          v-for="card in cards"
-          :key="card.title"
-          cols="12"
-          md="4"
-        >
+        <v-col v-for="card in cards" :key="card.title" cols="12" md="4">
           <base-info-card v-bind="card" />
         </v-col>
       </v-row>
@@ -22,30 +17,33 @@
 </template>
 
 <script>
-  export default {
-    name: 'SectionAboutOurProduct',
+export default {
+  name: 'SectionAboutOurProduct',
 
-    data: () => ({
-      cards: [
-        {
-          title: 'Grow your Revenue',
-          subtitle: 'Best Productivity',
-          text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          callout: '01',
-        },
-        {
-          title: 'Affordable Prices',
-          subtitle: 'Special Offers',
-          text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          callout: '02',
-        },
-        {
-          title: 'Target Setting',
-          subtitle: 'Income Flow',
-          text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          callout: '03',
-        },
-      ],
-    }),
-  }
+  data: () => ({
+    cards: [
+      {
+        title: '24 Hour Service',
+        subtitle: 'Available any day anytime',
+        text:
+          'We are on call 24 hours a day ready to help turn your dream project into a reality.',
+        callout: '01'
+      },
+      {
+        title: 'Serving your community',
+        subtitle: 'Based in Socal',
+        text:
+          'We serve the communities in Los Angeles, Thousand Oaks, Ventura, and neighboring cities in California.',
+        callout: '02'
+      },
+      {
+        title: 'Improve your home value',
+        subtitle: 'Income Flow',
+        text:
+          'Planning on selling your home? Get the maximum return out of your investment by touching up the paint!',
+        callout: '03'
+      }
+    ]
+  })
+};
 </script>

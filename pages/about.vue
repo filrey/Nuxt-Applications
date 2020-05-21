@@ -8,7 +8,7 @@ import LoadSections from '@/mixins/load-sections';
 export default {
   name: 'About',
 
-  metaInfo: { title: '24HrPaintingServices - About Us' },
+  metaInfo: { title: '24HrPaintingServices | About Us' },
 
   extends: Section,
 
@@ -23,7 +23,6 @@ export default {
       'theme-features',
       'affiliates',
       'newsletter',
-      'pro-features',
       'info'
     ])
   ],

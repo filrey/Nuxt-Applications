@@ -2,9 +2,9 @@
   <section id="hero">
     <v-img
       :min-height="minHeight"
-      :src="require('@/assets/home-hero1.jpg')"
+      :src="require('@/assets/home-hero2.jpg')"
       class="white--text"
-      gradient="to right, rgba(5, 11, 31, .7), rgba(5, 11, 31, .7)"
+      gradient="to right, rgba(5, 11, 31, .7), rgba(5, 11, 31, .3)"
     >
       <v-container class="fill-height px-4 py-12">
         <v-responsive
@@ -41,23 +41,32 @@
             "
             class="d-flex flex-wrap"
           >
-            <base-btn>
-              Discover More
-            </base-btn>
+            <nuxt-link to="/contact">
+              <base-img
+                :src="require('@/assets/QuoteBtn.png')"
+                contain
+                max-width="328"
+                width="100%"
+              />
+            </nuxt-link>
+
+            <!-- <base-btn>
+              Request A Quote
+            </base-btn> -->
 
             <span class="font-weight-bold ml-6 mr-4 my-4">or</span>
 
             <base-btn :ripple="false" class="pa-1" height="auto" text>
-              Get Started Now
+              Learn more
             </base-btn>
 
-            <base-img
+            <!-- <base-img
               :src="require('@/assets/customer satisfaction.png')"
               class="mr-3 mt-7 hidden-xs-only"
               contain
               max-width="500"
               width="100%"
-            />
+            /> -->
           </div>
         </v-responsive>
       </v-container>

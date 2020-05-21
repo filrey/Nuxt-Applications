@@ -8,21 +8,20 @@ import LoadSections from '@/mixins/load-sections';
 export default {
   name: 'Home',
 
-  metaInfo: { title: '24HrPaintingServices - Home' },
+  metaInfo: { title: '24HrPaintingServices | Home' },
 
   extends: Section,
 
   mixins: [
     LoadSections([
       'hero',
-      'theme-features',
+      'about-our-product',
       'features',
-      'contact-us',
+      'theme-features',
       'affiliates',
       'social-media',
       'keep-in-touch',
-      'newsletter',
-      'pro-features',
+      'contact-us',
       'info'
     ])
   ],

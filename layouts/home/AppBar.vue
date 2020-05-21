@@ -1,12 +1,14 @@
 <template>
   <div>
     <v-app-bar id="home-app-bar" app color="white" elevation="1" height="80">
-      <base-img
-        :src="require('@/assets/logoN.png')"
-        contain
-        max-width="328"
-        width="100%"
-      />
+      <nuxt-link to="/">
+        <base-img
+          :src="require('@/assets/logoN.png')"
+          contain
+          max-width="328"
+          width="100%"
+        />
+      </nuxt-link>
 
       <v-spacer />
 

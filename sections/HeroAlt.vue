@@ -66,7 +66,7 @@ export default {
     },
     src() {
       if (this.$route.name == 'contact') {
-        return require('@/assets/contact.jpg');
+        return require('@/assets/contact-1.jpg');
       } else if (this.$route.name == 'about') {
         return require('@/assets/about.jpg');
       }
