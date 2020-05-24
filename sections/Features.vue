@@ -1,13 +1,9 @@
 <template>
-  <base-section
-    id="features"
-    class="secondary"
-  >
-    <v-responsive
-      class="mx-auto"
-      max-width="1350"
-    >
+  <base-section id="features" class="secondary">
+    <v-responsive class="mx-auto" max-width="1350">
       <v-container fluid>
+        <base-section-heading class="whiteText" title="Services Offered">
+        </base-section-heading>
         <v-row>
           <v-col
             v-for="card in cards"
@@ -16,11 +12,7 @@
             sm="4"
             md="3"
           >
-            <base-info-card
-              align="center"
-              dark
-              v-bind="card"
-            />
+            <base-info-card align="center" dark v-bind="card" />
           </v-col>
         </v-row>
       </v-container>
@@ -29,32 +21,38 @@
 </template>
 
 <script>
-  export default {
-    name: 'SectionFeatures',
+export default {
+  name: 'SectionFeatures',
 
-    data: () => ({
-      cards: [
-        {
-          icon: 'mdi-keyboard-outline',
-          title: 'Trendy Design',
-          text: 'Efficiently unleash media information without cross-media value. Quickly maximize value timely deliverables schemas.',
-        },
-        {
-          icon: 'mdi-camera-outline',
-          title: 'Photography',
-          text: 'Efficiently unleash media information without cross-media value. Quickly maximize value timely deliverables schemas.',
-        },
-        {
-          icon: 'mdi-pencil-outline',
-          title: 'Brand Making',
-          text: 'Efficiently unleash media information without cross-media value. Quickly maximize value timely deliverables schemas.',
-        },
-        {
-          icon: 'mdi-puzzle-outline',
-          title: '24/7 Support',
-          text: 'Efficiently unleash media information without cross-media value. Quickly maximize value timely deliverables schemas.',
-        },
-      ],
-    }),
-  }
+  data: () => ({
+    cards: [
+      {
+        icon: 'mdi-border-inside',
+        title: 'Interior',
+        text: ''
+      },
+      {
+        icon: 'mdi-border-outside',
+        title: 'Exterior',
+        text: ''
+      },
+      {
+        icon: 'mdi-home-city',
+        title: 'Commercial',
+        text: ''
+      },
+      {
+        icon: 'mdi-home',
+        title: 'Residential',
+        text: ''
+      }
+    ]
+  })
+};
 </script>
+
+<style lang="css" scoped>
+.whiteText {
+  color: white;
+}
+</style>

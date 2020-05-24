@@ -107,7 +107,7 @@ export default {
             '</span></p>'
         },
         // directs all quote requests to the email below
-        to: 'filibertoreyes55@gmail.com'
+        to: 'javierlopezfredy199@gmail.com'
       };
 
       fireDb

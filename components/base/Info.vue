@@ -21,16 +21,18 @@
         Decorating (CA) License number: #1042217 Valid through 07/31/2020
       </base-body>
 
-      <base-btn class="mb-12" color="white" outlined>
-        Privacy Policy
-      </base-btn>
+      <privacy-policy />
     </div>
   </v-theme-provider>
 </template>
 
 <script>
+import privacyPolicy from '@/components/PrivacyPolicy';
 export default {
   name: 'BaseInfo',
+  components: {
+    privacyPolicy
+  },
 
   props: {
     title: String,

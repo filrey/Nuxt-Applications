@@ -11,8 +11,8 @@
 
             <base-body space="0">
               <span class="white--text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
-                itaque modi ab accusantium architecto voluptates ipsa molestiae.
+                Need advice on your current project? We're happy to help send us
+                a message!
               </span>
             </base-body>
           </v-col>
@@ -21,10 +21,9 @@
             <base-btn
               :block="$vuetify.breakpoint.smAndDown"
               color="white"
-              href="mailto:filibertoreyes55@gmail.com?subject=I%20Have%20Question"
+              to="/contact"
               large
               outlined
-              target="_blank"
             >
               Contact Us
             </base-btn>

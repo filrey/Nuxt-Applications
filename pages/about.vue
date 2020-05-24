@@ -20,8 +20,8 @@ export default {
     LoadSections([
       'hero-alt',
       'about-our-product',
-      'theme-features',
       'affiliates',
+      'map',
       'contact-us',
       'info'
     ])

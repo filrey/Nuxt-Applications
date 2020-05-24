@@ -17,9 +17,7 @@ export default {
       'hero',
       'about-our-product',
       'features',
-      'theme-features',
       'affiliates',
-      'social-media',
       'keep-in-touch',
       'contact-us',
       'info'

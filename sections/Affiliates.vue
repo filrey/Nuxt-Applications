@@ -1,29 +1,22 @@
 <template>
-  <base-section
-    id="affiliates"
-    class="grey lighten-4"
-    space="36"
-  >
+  <base-section id="affiliates" class="accent lighten-4" space="36">
     <v-container>
-      <base-section-heading title="Who's using Zero?" />
+      <base-section-heading title="Top Rated Professionals on" />
 
       <v-slide-group>
-        <template v-for="n in 6">
-          <v-slide-item
-            :key="n"
-            class="align-self-center"
-          >
+        <template v-for="n in 3">
+          <v-slide-item :key="n" class="align-self-center">
             <base-img
               :src="require(`@/assets/logo-${n}.png`)"
               color="grey"
               contain
-              height="40"
+              height="100"
               width="128"
             />
           </v-slide-item>
 
           <v-responsive
-            v-if="n < 6"
+            v-if="n < 3"
             :key="`divider-${n}`"
             class="text-center"
             height="56"
@@ -38,7 +31,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'SectionAffiliates',
-  }
+export default {
+  name: 'SectionAffiliates'
+};
 </script>

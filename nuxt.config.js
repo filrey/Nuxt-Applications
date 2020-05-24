@@ -52,7 +52,7 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: '#42a5f6',
+          primary: '#F4511E',
           secondary: '#050b1f',
           accent: '#204165'
         },
