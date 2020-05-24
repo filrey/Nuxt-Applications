@@ -11,10 +11,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "firebase": "^7.14.4",
+    "firebase": "^7.14.5",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@mdi/font": "^5.3.45",
     "@nuxtjs/vuetify": "^1.0.0"
   }
 }

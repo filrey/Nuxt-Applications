@@ -24,28 +24,20 @@
         v-on="on"
       >
         <v-icon large>
-          mdi-cog
+          mdi-phone
         </v-icon>
       </v-card>
     </template>
 
     <v-card class="py-2">
-      <base-title
-        align="center"
-        title="Theme Colors"
-        space="0"
-      />
+      <base-title align="center" title="Theme Colors" space="0" />
 
       <v-card-text>
         <v-item-group
           v-model="$vuetify.theme.themes.light.primary"
           class="d-flex justify-center"
         >
-          <v-item
-            v-for="color in colors"
-            :key="color"
-            :value="color"
-          >
+          <v-item v-for="color in colors" :key="color" :value="color">
             <template v-slot="{ active, toggle }">
               <base-avatar
                 :color="color"
@@ -74,11 +66,11 @@
         <base-btn
           :to="{ name: 'Sink' }"
           block
-          color="grey darken-1"
+          color="primary"
           dark
           @click="menu = false"
         >
-          View All Components
+          Request Free Quote
         </base-btn>
 
         <v-divider class="my-6" />
@@ -109,18 +101,14 @@
 </template>
 
 <script>
-  export default {
-    name: 'HomeSettings',
+export default {
+  name: 'HomeSettings',
 
-    data () {
-      return {
-        colors: [
-          this.$vuetify.theme.themes.light.primary,
-          '#9368e9',
-          '#F4511E',
-        ],
-        menu: false,
-      }
-    },
+  data() {
+    return {
+      colors: [this.$vuetify.theme.themes.light.primary, '#9368e9', '#F4511E'],
+      menu: false
+    };
   }
+};
 </script>

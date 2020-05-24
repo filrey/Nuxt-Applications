@@ -16,7 +16,7 @@ export default {
 
   extends: Section,
 
-  mixins: [LoadSections(['hero-alt', 'keep-in-touch', 'map', 'newsletter'])],
+  mixins: [LoadSections(['hero-alt', 'keep-in-touch', 'map', 'contact-us'])],
 
   props: {
     id: {

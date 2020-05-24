@@ -22,7 +22,7 @@ export default {
       'about-our-product',
       'theme-features',
       'affiliates',
-      'newsletter',
+      'contact-us',
       'info'
     ])
   ],

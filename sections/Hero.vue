@@ -45,7 +45,7 @@
               <base-img
                 :src="require('@/assets/QuoteBtn.png')"
                 contain
-                max-width="328"
+                max-width="290"
                 width="100%"
               />
             </nuxt-link>
@@ -56,7 +56,13 @@
 
             <span class="font-weight-bold ml-6 mr-4 my-4">or</span>
 
-            <base-btn :ripple="false" class="pa-1" height="auto" text>
+            <base-btn
+              href="#about-our-product"
+              :ripple="false"
+              class="pa-1"
+              height="auto"
+              text
+            >
               Learn more
             </base-btn>
 

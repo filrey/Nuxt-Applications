@@ -44,6 +44,9 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
+    icons: {
+      iconfont: 'mdi'
+    },
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
