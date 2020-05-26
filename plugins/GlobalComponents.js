@@ -2,6 +2,9 @@ import Vue from 'vue';
 import Heading from '@/mixins/heading';
 import Meta from '@/mixins/meta';
 
+//css
+import '@mdi/font/css/materialdesignicons.css';
+
 //Imports
 import BaseAvatar from '@/components/base/Avatar';
 import BaseAvatarCard from '@/components/base/AvatarCard';
