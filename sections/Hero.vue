@@ -2,7 +2,7 @@
   <section id="hero">
     <v-img
       :min-height="minHeight"
-      :src="require('@/assets/home-hero.jpg')"
+      :src="require('@/assets/Randomized-Pattern.svg')"
       class="white--text"
       gradient="to right, rgba(5, 11, 31, .8), rgba(5, 11, 31, .8)"
     >
@@ -13,14 +13,18 @@
           max-width="700"
           width="100%"
         >
-          <base-heading title="PROMOTE YOUR BUSINESS WITH ZERO" />
+          <base-heading title="Hello, my name is Filiberto!" />
 
           <base-body>
-            Infographic hypotheses influencer user experience Long madel ture
-            gen-z paradigm shift client partner network product seilans solve
-            management influencer analytics leverage virality. incubator seed
-            round massmarket. buyer agile development growth hacking
-            business-to-consumer ecosystem
+            <p>
+              I am a software developer specializing in web development.
+            </p>
+
+            <p>
+              I'm remotely available. If you want to get in touch about a
+              project collaboration feel free to shoot me an email at
+              filibertoreyes55@gmail.com Thanks for visiting!
+            </p>
           </base-body>
 
           <div
@@ -31,15 +35,32 @@
             "
             class="d-flex flex-wrap"
           >
-            <base-btn>
-              Discover More
-            </base-btn>
+            <v-btn color="green" to="/projects" target="blank">
+              <v-icon class="mr-1">mdi-view-quilt</v-icon>
+              Projects
+            </v-btn>
 
-            <span class="font-weight-bold ml-6 mr-4 my-4">or</span>
+            <span class="font-weight-bold ml-6 mr-4 my-4">|</span>
 
-            <base-btn :ripple="false" class="pa-1" height="auto" text>
-              Get Started Now
-            </base-btn>
+            <v-btn
+              color="red"
+              href="https://drive.google.com/open?id=1sZ9xtxoL7zoTen-CdcelTIt9nf2VaYHw"
+              target="blank"
+            >
+              <v-icon class="mr-1">mdi-file-document</v-icon>
+              Contact
+            </v-btn>
+
+            <span class="font-weight-bold ml-6 mr-4 my-4">|</span>
+
+            <v-btn
+              color="black"
+              href="https://drive.google.com/open?id=1sZ9xtxoL7zoTen-CdcelTIt9nf2VaYHw"
+              target="blank"
+            >
+              <v-icon class="mr-1">mdi-file-document</v-icon>
+              Resume
+            </v-btn>
           </div>
         </v-responsive>
       </v-container>
@@ -49,7 +70,7 @@
 
 <script>
 export default {
-  name: 'SectionHero',
+  name: "SectionHero",
 
   provide: {
     theme: { isDark: true }
@@ -57,7 +78,7 @@ export default {
 
   computed: {
     minHeight() {
-      const height = this.$vuetify.breakpoint.mdAndUp ? '100vh' : '50vh';
+      const height = this.$vuetify.breakpoint.mdAndUp ? "100vh" : "50vh";
 
       return `calc(${height} - ${this.$vuetify.application.top}px)`;
     }

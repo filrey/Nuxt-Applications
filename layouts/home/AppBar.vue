@@ -1,20 +1,9 @@
 <template>
   <div>
     <v-app-bar id="home-app-bar" app color="white" elevation="1" height="80">
-      <base-img
-        :src="require('@/assets/logo.svg')"
-        class="mr-3 hidden-xs-only"
-        contain
-        max-width="52"
-        width="100%"
-      />
-
-      <base-img
-        :src="require('@/assets/zero-logo-light.svg')"
-        contain
-        max-width="128"
-        width="100%"
-      />
+      <nuxt-link class="noDeco" to="/">
+        <h1>Filiberto Reyes | Web Engineer</h1>
+      </nuxt-link>
 
       <v-spacer />
 
@@ -45,27 +34,27 @@
 
 <script>
 export default {
-  name: 'HomeAppBar',
+  name: "HomeAppBar",
 
   components: {
-    HomeDrawer: () => import('./Drawer'),
-    BaseImg: () => import('~/components/base/Img')
+    HomeDrawer: () => import("./Drawer"),
+    BaseImg: () => import("~/components/base/Img")
   },
 
   data: () => ({
     drawer: null,
     items: [
       {
-        title: 'Home',
-        to: '/'
+        title: "Home",
+        to: "/"
       },
       {
-        title: 'About',
-        to: '/about'
+        title: "About",
+        to: "/about"
       },
       {
-        title: 'Contact us',
-        to: '/contact'
+        title: "Contact us",
+        to: "/contact"
       }
     ]
   })
@@ -81,4 +70,9 @@ export default {
   .v-tab
     &::before
       display: none
+
+  .noDeco
+    color: black
+    text-decoration: none
+  
 </style>
