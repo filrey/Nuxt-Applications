@@ -1,33 +1,34 @@
 <script>
 // Extensions
-import Section from '@/sections/View';
+import Section from "@/sections/View";
 
 // Mixins
-import LoadSections from '@/mixins/load-sections';
+import LoadSections from "@/mixins/load-sections";
 
 export default {
-  name: 'Home',
+  name: "Home",
 
-  metaInfo: { title: '24HrPaintingServices | Home' },
+  metaInfo: { title: "24HrPaintingServices | Home" },
 
   extends: Section,
 
   mixins: [
     LoadSections([
-      'hero',
-      'about-our-product',
-      'features',
-      'affiliates',
-      'keep-in-touch',
-      'contact-us',
-      'info'
+      "hero",
+      "about-our-product",
+      "features",
+      "social-media",
+      "affiliates",
+      "keep-in-touch",
+      "contact-us",
+      "info"
     ])
   ],
 
   props: {
     id: {
       type: String,
-      default: 'home'
+      default: "home"
     }
   }
 };
