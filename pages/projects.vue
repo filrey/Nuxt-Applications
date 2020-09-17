@@ -28,36 +28,42 @@
 
               <v-tooltip v-if="card.code" top>
                 <template v-slot:activator="{ on }">
-                  <v-btn dark icon :href="card.code" target="blank" v-on="on"
-                    ><font-awesome-icon :icon="['fas', 'laptop-code']" size="lg"
-                  /></v-btn>
+                  <v-btn dark icon :href="card.code" target="blank" v-on="on">
+                    <font-awesome-icon
+                      :icon="['fas', 'laptop-code']"
+                      size="lg"
+                    />
+                  </v-btn>
                 </template>
                 <span>Source Code</span>
               </v-tooltip>
 
               <v-tooltip v-else top>
                 <template v-slot:activator="{ on }">
-                  <v-btn dark icon @click="overlay = !overlay" v-on="on"
-                    ><font-awesome-icon :icon="['fas', 'laptop-code']" size="lg"
-                  /></v-btn>
+                  <v-btn dark icon @click="overlay = !overlay" v-on="on">
+                    <font-awesome-icon
+                      :icon="['fas', 'laptop-code']"
+                      size="lg"
+                    />
+                  </v-btn>
                 </template>
                 <span>Source Code</span>
               </v-tooltip>
 
               <v-tooltip v-if="card.live" top>
                 <template v-slot:activator="{ on }">
-                  <v-btn dark icon :href="card.live" target="blank" v-on="on"
-                    ><font-awesome-icon :icon="['fa', 'globe']" size="lg"
-                  /></v-btn>
+                  <v-btn dark icon :href="card.live" target="blank" v-on="on">
+                    <font-awesome-icon :icon="['fa', 'globe']" size="lg" />
+                  </v-btn>
                 </template>
                 <span>Live</span>
               </v-tooltip>
 
               <v-tooltip v-else top>
                 <template v-slot:activator="{ on }">
-                  <v-btn dark icon @click="overlay = !overlay" v-on="on"
-                    ><font-awesome-icon :icon="['fa', 'globe']" size="lg"
-                  /></v-btn>
+                  <v-btn dark icon @click="overlay = !overlay" v-on="on">
+                    <font-awesome-icon :icon="['fa', 'globe']" size="lg" />
+                  </v-btn>
                 </template>
                 <span>Live</span>
               </v-tooltip>
@@ -68,9 +74,9 @@
 
       <div @click="overlay = !overlay">
         <v-overlay :value="overlay">
-          <v-btn color="primary" class="mt-12">
-            Coming Soon or Private Repo
-          </v-btn>
+          <v-btn color="primary" class="mt-12"
+            >Coming Soon or Private Repo</v-btn
+          >
         </v-overlay>
       </div>
     </v-container>
@@ -96,7 +102,7 @@ export default {
           title: '24HrPaintingServices Business Site',
           src: require('@/assets/jpg/24flier.JPG'),
           code: 'https://github.com/filrey/Nuxt-Applications/tree/24hrpainting',
-          live: 'https://24hrpaintingservices.com/',
+          live: 'https://24hrpaintingservices.netlify.app/',
           lg: 6,
           sm: 12
         },
