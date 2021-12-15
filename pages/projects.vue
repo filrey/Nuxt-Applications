@@ -91,6 +91,14 @@ export default {
     return {
       cards: [
         {
+          title: 'Agile Sprint Board',
+          src: require('@/assets/png/asb.png'),
+          code: 'https://github.com/filrey/Nuxt-Sprint-Board',
+          live: 'https://agile-sprint-board.web.app/',
+          lg: 6,
+          sm: 12
+        },
+        {
           title: 'LuvApp',
           src: require('@/assets/jpg/LuvApp.JPG'),
           code: 'https://github.com/filrey/LuvApp',
