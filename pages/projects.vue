@@ -120,32 +120,32 @@ export default {
           live: 'https://www.csun.edu/faculty/scholarship',
           lg: 6,
           sm: 12
-        },
-        {
-          title: 'Instant Insanity Solver',
-          src: require('@/assets/jpg/II.JPG'),
-          code: 'https://github.com/filrey/InstantInsanitySolver',
-          live: 'https://filrey-instant-insanity.netlify.com',
-          lg: 6,
-          sm: 12
-        },
-        {
-          title: 'Unity Tetris',
-          src: require('@/assets/jpg/tetris.JPG'),
-          code: 'https://github.com/filrey/Tetris-Unity',
-          live: 'https://filrey-unity-tetris.netlify.com/',
-          lg: 6,
-          sm: 12
-        },
-        {
-          title: 'Fictional Octopath Succotash (FOS)',
-          src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
-          src: require('@/assets/png/fos.png'),
-          code: 'https://github.com/filrey/fictional-octo-succotash',
-          live: 'https://filrey-fos.netlify.com',
-          lg: 6,
-          sm: 12
         }
+        // {
+        //   title: 'Instant Insanity Solver',
+        //   src: require('@/assets/jpg/II.JPG'),
+        //   code: 'https://github.com/filrey/InstantInsanitySolver',
+        //   live: 'https://filrey-instant-insanity.netlify.com',
+        //   lg: 6,
+        //   sm: 12
+        // },
+        // {
+        //   title: 'Unity Tetris',
+        //   src: require('@/assets/jpg/tetris.JPG'),
+        //   code: 'https://github.com/filrey/Tetris-Unity',
+        //   live: 'https://filrey-unity-tetris.netlify.com/',
+        //   lg: 6,
+        //   sm: 12
+        // }
+        // {
+        //   title: 'Fictional Octopath Succotash (FOS)',
+        //   src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
+        //   src: require('@/assets/png/fos.png'),
+        //   code: 'https://github.com/filrey/fictional-octo-succotash',
+        //   live: 'https://filrey-fos.netlify.com',
+        //   lg: 6,
+        //   sm: 12
+        // }
       ],
       overlay: false
     }
