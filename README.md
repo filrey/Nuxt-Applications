@@ -1,22 +1,37 @@
-# Filiberto Reyes - Web Developer
+# eldin.space
 
-> My posh Nuxt.js project
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9042b890-6768-4734-8fa2-cb0b81be7a72/deploy-status)](https://app.netlify.com/sites/eldin-space/deploys)
 
-## Build Setup
+## Project setup
 
-``` bash
-# install dependencies
-$ npm run install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+```
+npm install
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+### Compiles and hot-reloads for development
+
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+
+```
+npm run build
+```
+
+### Run your tests
+
+```
+npm run test
+```
+
+### Lints and fixes files
+
+```
+npm run lint
+```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
