@@ -51,10 +51,15 @@
                 Hello, my name is Filiberto! I'm a front-end developer who is
                 passionate about
                 <span class="devGreen font-weight-bold">VUE</span>, building
-                great user experiences, fighting for simplicity over complexity
-                and constantly learning. When I'm not coding or making videos,
-                you'll find me traveling across Europe.
+                great user experiences, learning as much as I can, and
+                connection with the people and places around me. When I'm not
+                coding I like to dance and explore interesting places. Feel free
+                to check out some of the projects I've worked on under the
+                <span class="red--text">Portofolio</span> section. Or reach out
+                to me directly via the
+                <span class="devGreen font-weight-bold">Contact</span> section.
               </p>
+              <em><small>Happy Coding - Filiberto</small></em>
             </div>
           </div>
         </v-card-title>

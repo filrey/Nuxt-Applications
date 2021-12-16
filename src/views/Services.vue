@@ -27,7 +27,7 @@
             :src="service.src"
             height="100"
             aspect-ratio="2.75"
-            :alt="'Eldin do ' + service.title"
+            :alt="'Filiberto do ' + service.title"
             lazy-src="https://cdn.dribbble.com/users/503653/screenshots/3143656/fluid-loader.gif"
             contain
           ></v-img>
