@@ -28,6 +28,34 @@
           <v-timeline-item color="red" small>
             <v-layout pt-3>
               <v-flex xs4>
+                <div class="caption font-weight-bold red--text">Mar 2022 -</div>
+                <div class="caption font-weight-bold red--text">CURRENT</div>
+              </v-flex>
+              <v-flex class="pl-2">
+                <strong>Front End/UX Developer</strong>
+                <div class="caption mb-2">
+                  Houlihan Lokey
+                </div>
+              </v-flex>
+            </v-layout>
+          </v-timeline-item>
+          <v-timeline-item color="red" small>
+            <v-layout pt-3>
+              <v-flex xs4>
+                <div class="caption font-weight-bold red--text">MAR 2021 -</div>
+                <div class="caption font-weight-bold red--text">NOV 2021</div>
+              </v-flex>
+              <v-flex class="pl-2">
+                <strong>Web Engineer</strong>
+                <div class="caption mb-2">
+                  SFS-LABS LCC
+                </div>
+              </v-flex>
+            </v-layout>
+          </v-timeline-item>
+          <v-timeline-item color="red" small>
+            <v-layout pt-3>
+              <v-flex xs4>
                 <div class="caption font-weight-bold red--text">AUG 2018 -</div>
                 <div class="caption font-weight-bold red--text">NOV 2019</div>
               </v-flex>
@@ -138,7 +166,7 @@
       </v-flex>
       <div class="mt-4 pt-2">
         <v-btn
-          href="https://drive.google.com/open?id=1sZ9xtxoL7zoTen-CdcelTIt9nf2VaYHw"
+          href="https://drive.google.com/file/d/1JtffrhOEkmusxNrYvMXTIaLeEBgrGKWy/view"
           target="_blank"
           color="red"
           dark
@@ -201,9 +229,11 @@ export default {
         "SASS",
         "Bootstrap",
         "Vuetify",
+        "PrimeNg",
         "Javascript",
         "Gulp",
-        "Webpack"
+        "Webpack",
+        "Unit Testing"
       ],
       backend: [
         "Node",
@@ -214,7 +244,8 @@ export default {
         "HTTP",
         "Axios",
         "RESTful web services",
-        "Firebase"
+        "Firebase",
+        "Postman"
       ],
       workflow: [
         "Git Version Control",
@@ -229,6 +260,7 @@ export default {
         "Adobe XD",
         "Wireframing",
         "Responsive Design",
+        "User Interface Design",
         "Interaction Design",
         "Animation"
       ]
